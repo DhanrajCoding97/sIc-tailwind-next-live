@@ -1,18 +1,22 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ heading, message }) => {
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
-      {/* Overlay */}
-      <div />
-      <div>
-        <h1>
-          If you want to get Electrical or Instrumentation Products you have
-          come to the Right place.
-        </h1>
-        <button>Get Started</button>
+    <section id="hero-section">
+      <div className="flex flex-wrap items-center justify-center min-h-screen md:h-screen lg:h-screen sm:h-screen custom-img bg-fixed bg-cover bg-center">
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[1]" />
+        <div className="p-5 text text-white z-[2] ml-5 mt-10rem">
+          <h1 className="text-2xl  md:text-4xl lg:text-5xl  font-bold text-clip">
+            {heading}
+          </h1>
+          <p className="py-4 text-xl font-bold">{message}</p>
+          <button className="px-8 py-2 border bg-white text-black font-bold hover:bg-emerald-400 hover:text-black transition-all ease-in-out">
+            Get Started
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
