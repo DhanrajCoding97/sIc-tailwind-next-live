@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #4ade80;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
-  color: #4ade80;
-  background-color: #000;
+  
 }
 
 .custom-img {
