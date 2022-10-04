@@ -11,7 +11,7 @@ const Hero = ({ heading, message }) => {
             {heading}
           </h1>
           <p className="py-4 text-xl font-bold">{message}</p>
-          <button className="px-8 py-2 border bg-white text-black font-bold hover:bg-emerald-400 hover:text-black transition-all ease-in-out">
+          <button className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black transition ease-in duration-300">
             Get Started
           </button>
         </div>
