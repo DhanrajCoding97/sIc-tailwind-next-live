@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Image from "next/image";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -30,26 +31,41 @@ const Navbar = () => {
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
       <div className="m-auto flex justify-between items-center p-4">
-        <Link href="/" className="">
-          <h1
-            style={{ color: `${textColor}` }}
-            className="font-bold text-3xl cursor-pointer text-cyan-500"
-          >
-            Star Instruments & Control
-          </h1>
-        </Link>
+        <div className="flex">
+          <div id="logo-container" className="flex md:hidden cursor-pointer">
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                width="50"
+                height="50"
+                className="rounded"
+              />
+            </Link>
+          </div>
+          <Link href="/" className="">
+            <h1
+              style={{ color: `${textColor}` }}
+              className="hidden md:block font-bold text-3xl cursor-pointer text-cyan-500"
+            >
+              Star Instruments & Control
+            </h1>
+          </Link>
+        </div>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
           <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
             <Link href="/">Home</Link>
           </li>
           <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/#gallery">Gallery</Link>
+            <Link href="/#about">About Us</Link>
           </li>
           <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/work">Work</Link>
+            <Link href="/#services">Services</Link>
           </li>
           <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/contact">Contact</Link>
+            <Link href="/#products">Products</Link>
+          </li>
+          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
+            <Link href="/#contact">Contact Us</Link>
           </li>
         </ul>
 
@@ -74,16 +90,28 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-white">
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-white text-emerald-400"
+            >
               <Link href="/">Home</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-white">
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-white text-emerald-400"
+            >
               <Link href="/#gallery">Gallery</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-white">
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-white text-emerald-400"
+            >
               <Link href="/work">Work</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-white">
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-white text-emerald-400"
+            >
               <Link href="/contact">Contact</Link>
             </li>
           </ul>

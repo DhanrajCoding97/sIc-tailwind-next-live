@@ -11,7 +11,11 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
-  
+}
+
+body {
+  background-color: black;
+  color: #34d399;
 }
 
 .custom-img {
