@@ -51,9 +51,6 @@ const Slider = ({ slides }) => {
               }
             >
               <div className="relative flex flex-col text-center justify-center">
-                <h1 className="text-2xl font-bold text-emerald-400 bg-black p-4">
-                  {slide.caption}
-                </h1>
                 <BsArrowLeftCircle
                   onClick={prevSlide}
                   size={40}
@@ -74,6 +71,9 @@ const Slider = ({ slides }) => {
                   className="absolute top-[50%] right-[30px] text-white cursor-pointer select-none z-[2]"
                 />
               </div>
+              <h1 className="text-2xl font-bold text-emerald-400 bg-black p-4 text-center">
+                {slide.caption}
+              </h1>
             </div>
           );
         })}
