@@ -1,3 +1,4 @@
+import Contact from "../components/Contact";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import { SliderData } from "../components/SliderData";
@@ -10,6 +11,7 @@ export default function Home() {
         message="You have come to the Right place."
       />
       <Slider slides={SliderData} />
+      <Contact />
     </div>
   );
 }
