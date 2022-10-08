@@ -42,7 +42,7 @@ const Slider = ({ slides }) => {
       <div>
         {SliderData.map((slide, index) => {
           return (
-            <>
+            <div key={index}>
               <div
                 className={
                   index === current
@@ -55,7 +55,6 @@ const Slider = ({ slides }) => {
                 </h1>
               </div>
               <div
-                key={index}
                 className={
                   index === current
                     ? "opacity-[1] ease-in duration-1000"
@@ -84,7 +83,7 @@ const Slider = ({ slides }) => {
                   />
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
       </div>

@@ -16,8 +16,25 @@ html {
 body {
   background-color: black;
   color: #34d399;
+
 }
 
 .custom-img {
   background-image: url('https://images.unsplash.com/photo-1518704618243-b719e5d5f2b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
 }
+
+.content{
+  color: #34d399;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+  width: 100%;
+  border-bottom: white;
+}
+
+.content.show{
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+}
+

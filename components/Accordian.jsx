@@ -3,7 +3,7 @@ import { AccordianData } from "./AccordianData";
 import { IconContext } from "react-icons/lib";
 import { FiPlus, FiMinus } from "react-icons/fi";
 const Accordian = () => {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(null);
   const toggle = (index) => {
     if (clicked === index) {
       return setClicked(null);
@@ -25,30 +25,23 @@ const Accordian = () => {
           {AccordianData.map((item, index) => {
             return (
               <div
-                className="flex flex-col justify-center items-start rounded-sm sm:w-[500px] "
+                className="flex flex-col justify-center items-start sm:w-[500px] border-x"
                 key={index}
                 onClick={() => {
                   toggle(index);
                 }}
               >
-                <div className="w-[100%] font bold p-4 bg-white text-black flex justify-between cursor-pointer">
+                <div className="w-[100%] font bold bg-white text-black flex justify-between cursor-pointer p-4">
                   <h1 className="font-bold text-xl md:text-3xl">
                     {item.title}
                   </h1>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </div>
-                <div className="ease-in duration-500">
-                  {clicked === index ? (
-                    <div
-                      id="dropdown"
-                      className="w-[100%] border-solid border-white border-x-2"
-                    >
-                      <p className="font-bold p-4 text-xl last:border-b-2 border-t-2">
-                        {item.description}
-                      </p>
-                    </div>
-                  ) : null}
-                </div>
+                <span className="w-[98%] px-4 border-white my-[1px]">
+                  <p className={clicked === index ? "content show" : "content"}>
+                    {item.description}
+                  </p>
+                </span>
               </div>
             );
           })}
