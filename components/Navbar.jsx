@@ -1,12 +1,15 @@
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("#4ade80");
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
 
   const handleNav = () => {
     setNav(!nav);
@@ -31,9 +34,9 @@ const Navbar = () => {
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
       <div className="m-auto flex justify-between items-center p-4">
-        <div className="flex">
+        <div className="flex" onClick={toggleHome}>
           <div id="logo-container" className="flex md:hidden cursor-pointer">
-            <Link href="/">
+            <Link to="/">
               <Image
                 src="/logo.png"
                 width="50"
@@ -42,7 +45,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <Link href="/" className="">
+          <Link to="/">
             <h1
               style={{ color: `${textColor}` }}
               className="hidden md:block font-bold text-3xl cursor-pointer text-cyan-500"
@@ -52,20 +55,65 @@ const Navbar = () => {
           </Link>
         </div>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/">Home</Link>
+          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <Link
+              to="hero"
+              spy={true}
+              smooth={true}
+              exact="true"
+              offset={0}
+              duration={500}
+            >
+              Home
+            </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/#about">About Us</Link>
+          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              exact="true"
+              offset={-87}
+              duration={500}
+            >
+              About Us
+            </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/#services">Services</Link>
+          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              exact="true"
+              offset={100}
+              duration={500}
+            >
+              Services
+            </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/#products">Products</Link>
+          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <Link
+              to="products"
+              spy={true}
+              smooth={true}
+              exact="true"
+              offset={100}
+              duration={500}
+            >
+              Products
+            </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300">
-            <Link href="/#contact">Contact Us</Link>
+          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              exact="true"
+              offset={-85}
+              duration={500}
+            >
+              Contact Us
+            </Link>
           </li>
         </ul>
 
@@ -90,29 +138,70 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-white text-emerald-400"
-            >
-              <Link href="/">Home</Link>
+            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+              <Link
+                to="hero"
+                spy={true}
+                smooth={true}
+                exact="true"
+                offset={0}
+                duration={300}
+                onClick={handleNav}
+              >
+                Home
+              </Link>
             </li>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-white text-emerald-400"
-            >
-              <Link href="/#gallery">Gallery</Link>
+            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                exact="true"
+                offset={-87}
+                duration={300}
+                onClick={handleNav}
+              >
+                About Us
+              </Link>
             </li>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-white text-emerald-400"
-            >
-              <Link href="/work">Work</Link>
+            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                exact="true"
+                offset={100}
+                duration={300}
+                onClick={handleNav}
+              >
+                Services
+              </Link>
             </li>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-white text-emerald-400"
-            >
-              <Link href="/contact">Contact</Link>
+            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+              <Link
+                to="products"
+                spy={true}
+                smooth={true}
+                exact="true"
+                offset={100}
+                duration={300}
+                onClick={handleNav}
+              >
+                Products
+              </Link>
+            </li>
+            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                exact="true"
+                offset={20}
+                duration={300}
+                onClick={handleNav}
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>

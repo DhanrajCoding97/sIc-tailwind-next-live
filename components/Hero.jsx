@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = ({ heading, message }) => {
   return (
-    <section id="hero-section">
+    <section id="hero">
       <div className="flex flex-wrap items-center justify-center min-h-screen md:h-screen lg:h-screen sm:h-screen custom-img bg-fixed bg-cover bg-center">
         {/* Overlay */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[1]" />

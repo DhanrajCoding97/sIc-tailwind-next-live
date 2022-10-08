@@ -22,14 +22,14 @@ const Slider = ({ slides }) => {
   return (
     <div
       id="about"
-      className="mx-auto flex flex-col justify-start items-start px-40"
+      className="mx-auto flex flex-col justify-start items-start px-8 md:px-40 pt-10"
     >
       <div id="about-description" className="flex flex-col justify-center">
         <h1 className="text-2xl text-center border-double border-b-white font-bold border-emerald-40">
           About Us
         </h1>
-        <h2 className="text-xl mt-4">
-          Star Instruments & Controls is a company backed by a team of qualified
+        <h2 className="text-xl py-4">
+          Star Instruments & Control is a company backed by a team of qualified
           & experienced engineers specialized in Process and Industrial
           Automation
         </h2>

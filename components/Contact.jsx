@@ -25,10 +25,8 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <section id="contact-form" className="max-w-[1240px] m-auto h-screen">
-      <h1 className="text-2xl font-bold text-center p-4">
-        Let's Work Together
-      </h1>
+    <section id="contact" className="max-w-[1240px] m-auto h-screen mt-10">
+      <h1 className="text-2xl font-bold text-center p-4">Contact Us</h1>
       <form ref={form} onSubmit={sendEmail} className="max-w-[600px] m-auto">
         <div className="grid grid-cols-2 gap-2">
           <input

@@ -25,21 +25,23 @@ const Accordian = () => {
           {AccordianData.map((item, index) => {
             return (
               <div
-                className="flex flex-col justify-center items-start rounded-sm"
+                className="flex flex-col justify-center items-start rounded-sm sm:w-[500px] "
                 key={index}
                 onClick={() => {
                   toggle(index);
                 }}
               >
-                <div className="font bold p-4  bg-white text-black flex items-center w-[500px] justify-between text-center cursor-pointer">
-                  <h1 className="text-3xl">{item.title}</h1>
+                <div className="w-[100%] font bold p-4 bg-white text-black flex justify-between cursor-pointer">
+                  <h1 className="font-bold text-xl md:text-3xl">
+                    {item.title}
+                  </h1>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </div>
                 <div className="ease-in duration-500">
                   {clicked === index ? (
                     <div
                       id="dropdown"
-                      className="border-solid w-[500px] mr-6 border-white border-x-2"
+                      className="w-[100%] border-solid border-white border-x-2"
                     >
                       <p className="font-bold p-4 text-xl last:border-b-2 border-t-2">
                         {item.description}
