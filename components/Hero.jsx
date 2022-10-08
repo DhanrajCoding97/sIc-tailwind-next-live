@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Hero = ({ heading, message }) => {
   return (
@@ -11,9 +12,18 @@ const Hero = ({ heading, message }) => {
             {heading}
           </h1>
           <p className="py-4 text-xl font-bold">{message}</p>
-          <button className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black transition ease-in duration-300">
-            Get Started
-          </button>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            exact="true"
+            offset={-87}
+            duration={500}
+          >
+            <a className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black transition ease-in duration-300">
+              Get Started
+            </a>
+          </Link>
         </div>
       </div>
     </section>

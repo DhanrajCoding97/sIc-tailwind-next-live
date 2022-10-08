@@ -25,7 +25,7 @@ const Slider = ({ slides }) => {
       className="mx-auto flex flex-col justify-start items-start px-8 md:px-40 pt-10"
     >
       <div id="about-description" className="flex flex-col justify-center">
-        <h1 className="text-2xl text-center border-double border-b-white font-bold border-emerald-40">
+        <h1 className="text-3xl text-center border-double border-b-white font-bold border-emerald-40">
           About Us
         </h1>
         <h2 className="text-xl py-4">
