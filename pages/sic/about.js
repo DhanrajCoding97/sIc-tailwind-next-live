@@ -3,11 +3,11 @@ import Slider from "../../components/Slider";
 import { SliderData } from "../../components/SliderData";
 import Accordian from "../../components/Accordian";
 
-const about = () => {
+const About = () => {
   return (
     <section
       id="about"
-      className="mx-auto flex flex-col justify-start items-start px-8 md:px-40 pt-10 mt-[5%]"
+      className="mx-auto flex flex-col justify-center items-center pt-10 mt-[5%]"
     >
       <div id="about-description" className="flex flex-col justify-center">
         <h1 className="text-5xl text-center border-double border-b-white font-bold border-emerald-40 underline">
@@ -29,4 +29,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

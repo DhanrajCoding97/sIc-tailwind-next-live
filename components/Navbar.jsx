@@ -22,7 +22,7 @@ const Navbar = () => {
         setTextColor("#292524");
       } else {
         setColor("transparent");
-        setTextColor("#dc2626");
+        setTextColor("#34d399");
       }
     };
     window.addEventListener("scroll", changeColor);

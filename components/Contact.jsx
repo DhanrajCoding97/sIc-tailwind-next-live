@@ -25,7 +25,7 @@ const ContactForm = () => {
     e.target.reset();
   };
   return (
-    <>
+    <div>
       <form ref={form} onSubmit={sendEmail} className="max-w-[80%] m-auto">
         <input
           className="font-bold text-black border-emerald-400 rounded-sm p-3 w-full mb-2 bg-emerald-400 placeholder-black"
@@ -59,7 +59,7 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

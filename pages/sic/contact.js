@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../../components/Contact";
 
-const contact = () => {
+const Contact = () => {
   return (
     <>
       <section id="contact" className="max-w-[1240px] m-auto h-screen mt-10">
@@ -12,4 +12,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

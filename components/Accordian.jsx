@@ -16,7 +16,7 @@ const Accordian = () => {
     <IconContext.Provider value={{ color: "#000", size: "25px" }}>
       <div
         id="AccordianSection"
-        className="flex justify-center items-center my-10"
+        className="flex justify-start items-start my-10"
       >
         <div id="container" className="border-white">
           {AccordianData.map((item, index) => {
