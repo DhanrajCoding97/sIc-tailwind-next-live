@@ -104,29 +104,39 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <li>
               <Link href="/">
-                <a>Home</a>
+                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                  Home
+                </a>
               </Link>
             </li>
-            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <li>
               <Link href="/sic/about">
-                <a>About Us</a>
+                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                  About Us
+                </a>
               </Link>
             </li>
-            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <li>
               <Link href="/sic/about">
-                <a>Services</a>
+                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                  Services
+                </a>
               </Link>
             </li>
-            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <li>
               <Link href="/sic/products">
-                <a>Products</a>
+                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                  Products
+                </a>
               </Link>
             </li>
-            <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+            <li>
               <Link href="/sic/contact">
-                <a>Contact Us</a>
+                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                  Contact Us
+                </a>
               </Link>
             </li>
           </ul>

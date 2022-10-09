@@ -2,6 +2,22 @@ import { React, useState } from "react";
 import { AccordianData } from "./AccordianData";
 import { IconContext } from "react-icons/lib";
 import { FiPlus, FiMinus } from "react-icons/fi";
+
+let AccordianDataArray = AccordianData.map((item) => item.details);
+const list = [];
+// console.log(AccordianDataArray);
+
+let AccordianDataArrayLength = AccordianDataArray.length;
+for (let i = 0; i < AccordianDataArrayLength; i++) {
+  let items = AccordianDataArray[i].length;
+  for (let n = 0; n < items; n++) {
+    list.push(AccordianDataArray[i][n]);
+  }
+}
+
+// const detailsArr = AccordianDataJson.map((item) => item.details);
+// console.log(detailsArr);
+// detailsArr.map((item) => console.log(item));
 const Accordian = () => {
   const [clicked, setClicked] = useState(null);
   const toggle = (index) => {
@@ -32,11 +48,9 @@ const Accordian = () => {
                   {item.title}
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </div>
-                <span className="w-[98%] border-white my-[1px] p-4">
-                  <p className={clicked === index ? "content show" : "content"}>
-                    {item.description}
-                  </p>
-                </span>
+                <div className={clicked === index ? "content show" : "content"}>
+                  {list}
+                </div>
               </div>
             );
           })}
