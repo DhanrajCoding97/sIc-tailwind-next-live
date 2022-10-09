@@ -19,10 +19,9 @@ const Hero = ({ heading, message }) => {
             exact="true"
             offset={-87}
             duration={500}
+            className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black transition ease-in duration-300 cursor-pointer"
           >
-            <a className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black transition ease-in duration-300">
-              Get Started
-            </a>
+            Get Started
           </Link>
         </div>
       </div>

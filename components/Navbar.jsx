@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
-import { Link, animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("#4ade80");
+  const [textColor, setTextColor] = useState("#34d399");
   const toggleHome = () => {
     scroll.scrollToTop();
   };
@@ -18,11 +18,11 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor("#000000");
-        setTextColor("#ffffff");
+        setColor("#ffffff");
+        setTextColor("#292524");
       } else {
         setColor("transparent");
-        setTextColor("#4ade80");
+        setTextColor("#dc2626");
       }
     };
     window.addEventListener("scroll", changeColor);
@@ -36,87 +36,53 @@ const Navbar = () => {
       <div className="m-auto flex justify-between items-center p-4">
         <div className="flex" onClick={toggleHome}>
           <div id="logo-container" className="flex md:hidden cursor-pointer">
-            <Link to="/">
-              <Image
-                src="/logo.png"
-                width="50"
-                height="50"
-                className="rounded"
-              />
+            <Link href="/">
+              <a>
+                <Image
+                  src="/logo.png"
+                  width="50"
+                  height="50"
+                  className="rounded"
+                />
+              </a>
             </Link>
           </div>
-          <Link to="/">
-            <h1
+          <Link href="/">
+            <a
               style={{ color: `${textColor}` }}
-              className="hidden md:block font-bold text-3xl cursor-pointer text-cyan-500"
+              className="hidden md:block font-bold text-3xl cursor-pointer sm:hover:text-sky-600 ease-in duration-300"
             >
-              Star Instruments & Control
-            </h1>
+              <h1>Star Instruments & Control</h1>
+            </a>
           </Link>
         </div>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-            <Link
-              to="hero"
-              spy={true}
-              smooth={true}
-              exact="true"
-              offset={0}
-              duration={500}
-            >
-              Home
+        <ul className="hidden sm:flex">
+          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+            <Link href="/">
+              <a style={{ color: `${textColor}` }}>Home</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              exact="true"
-              offset={-87}
-              duration={500}
-            >
-              About Us
+          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+            <Link href="/sic/about">
+              <a style={{ color: `${textColor}` }}>About Us</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              exact="true"
-              offset={100}
-              duration={500}
-            >
-              Services
+          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+            <Link href="/sic/services">
+              <a style={{ color: `${textColor}` }}>Services</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-            <Link
-              to="products"
-              spy={true}
-              smooth={true}
-              exact="true"
-              offset={100}
-              duration={500}
-            >
-              Products
+          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+            <Link href="/sic/products">
+              <a style={{ color: `${textColor}` }}>Products</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              exact="true"
-              offset={-85}
-              duration={500}
-            >
-              Contact Us
+          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+            <Link href="/sic/contact">
+              <a style={{ color: `${textColor}` }}>Contact Us</a>
             </Link>
           </li>
         </ul>
-
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
@@ -139,68 +105,28 @@ const Navbar = () => {
         >
           <ul>
             <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-              <Link
-                to="hero"
-                spy={true}
-                smooth={true}
-                exact="true"
-                offset={0}
-                duration={300}
-                onClick={handleNav}
-              >
-                Home
+              <Link href="/">
+                <a>Home</a>
               </Link>
             </li>
             <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                exact="true"
-                offset={-87}
-                duration={300}
-                onClick={handleNav}
-              >
-                About Us
+              <Link href="/sic/about">
+                <a>About Us</a>
               </Link>
             </li>
             <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                exact="true"
-                offset={100}
-                duration={300}
-                onClick={handleNav}
-              >
-                Services
+              <Link href="/sic/about">
+                <a>Services</a>
               </Link>
             </li>
             <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-              <Link
-                to="products"
-                spy={true}
-                smooth={true}
-                exact="true"
-                offset={100}
-                duration={300}
-                onClick={handleNav}
-              >
-                Products
+              <Link href="/sic/products">
+                <a>Products</a>
               </Link>
             </li>
             <li className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                exact="true"
-                offset={20}
-                duration={300}
-                onClick={handleNav}
-              >
-                Contact Us
+              <Link href="/sic/contact">
+                <a>Contact Us</a>
               </Link>
             </li>
           </ul>

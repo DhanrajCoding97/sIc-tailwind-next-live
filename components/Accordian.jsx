@@ -18,26 +18,21 @@ const Accordian = () => {
         id="AccordianSection"
         className="flex justify-center items-center my-10"
       >
-        <div
-          id="container"
-          className="shadow-[2px 10px 35px 1px rgba(153,153,153,0.3)]"
-        >
+        <div id="container" className="border-white">
           {AccordianData.map((item, index) => {
             return (
               <div
-                className="flex flex-col justify-center items-start sm:w-[500px] border-x"
+                className="flex flex-col justify-center items-start sm:w-[500px]"
                 key={index}
                 onClick={() => {
                   toggle(index);
                 }}
               >
-                <div className="w-[100%] font bold bg-white text-black flex justify-between cursor-pointer p-4">
-                  <h1 className="font-bold text-xl md:text-3xl">
-                    {item.title}
-                  </h1>
+                <div className="w-[100%] font bold text-black flex justify-between cursor-pointer text-xl md:text-3xl bg-white p-4">
+                  {item.title}
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </div>
-                <span className="w-[98%] px-4 border-white my-[1px]">
+                <span className="w-[98%] border-white my-[1px] p-4">
                   <p className={clicked === index ? "content show" : "content"}>
                     {item.description}
                   </p>

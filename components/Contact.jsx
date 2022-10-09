@@ -1,7 +1,7 @@
 import { React, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+const ContactForm = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,8 +25,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <section id="contact" className="max-w-[1240px] m-auto h-screen mt-10">
-      <h1 className="text-2xl font-bold text-center p-4">Contact Us</h1>
+    <>
       <form ref={form} onSubmit={sendEmail} className="max-w-[80%] m-auto">
         <input
           className="font-bold text-black border-emerald-400 rounded-sm p-3 w-full mb-2 bg-emerald-400 placeholder-black"
@@ -60,8 +59,8 @@ const Contact = () => {
           Submit
         </button>
       </form>
-    </section>
+    </>
   );
 };
 
-export default Contact;
+export default ContactForm;
