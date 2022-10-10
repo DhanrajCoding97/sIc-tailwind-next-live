@@ -99,42 +99,57 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 overflow-hidden"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 overflow-hiiden"
           }
         >
-          <ul>
+          <ul className="flex flex-col justify-center items-center gap-4 overflow-hidden">
             <li>
               <Link href="/">
-                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                <a
+                  onClick={handleNav}
+                  className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
+                >
                   Home
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/sic/about">
-                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                <a
+                  onClick={handleNav}
+                  className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
+                >
                   About Us
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/sic/about">
-                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                <a
+                  onClick={handleNav}
+                  className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
+                >
                   Services
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/sic/products">
-                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                <a
+                  onClick={handleNav}
+                  className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
+                >
                   Products
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/sic/contact">
-                <a className="p-4 text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer">
+                <a
+                  onClick={handleNav}
+                  className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
+                >
                   Contact Us
                 </a>
               </Link>
