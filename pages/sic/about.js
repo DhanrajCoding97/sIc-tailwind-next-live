@@ -5,10 +5,7 @@ import Accordian from "../../components/Accordian";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="mx-auto flex flex-col justify-center items-center pt-10 mt-[5%]"
-    >
+    <section id="about" className="flex flex-col pt-10 mt-[5%] mx-[5%]">
       <div id="about-description" className="flex flex-col justify-center">
         <h1 className="text-5xl text-center border-double border-b-white font-bold border-emerald-40 underline">
           About Us

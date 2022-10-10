@@ -14,7 +14,7 @@ export const AccordianData = [
   },
   {
     id: "2",
-    title: "Pulp & Paper Industries:",
+    title: "Pulp & Paper Industries",
     details: [
       "Pulp flow rate control system",
       "Consistency control system.",
