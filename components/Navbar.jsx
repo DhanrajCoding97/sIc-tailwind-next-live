@@ -39,6 +39,7 @@ const Navbar = () => {
             <Link href="/">
               <a>
                 <Image
+                  alt="Star Instruments & Control"
                   src="/logo.png"
                   width="50"
                   height="50"
