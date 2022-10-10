@@ -1,6 +1,4 @@
 import React from "react";
-import Slider from "../../components/Slider";
-import { SliderData } from "../../components/SliderData";
 import Accordian from "../../components/Accordian";
 
 const About = () => {
@@ -21,7 +19,6 @@ const About = () => {
         </p>
       </div>
       <Accordian />
-      <Slider slides={SliderData} />
     </section>
   );
 };
