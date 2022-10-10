@@ -1,6 +1,7 @@
 //Accordian Data
 export const AccordianData = [
   {
+    id: "1",
     title: "Sugar Mills",
     details: [
       "Electronic weigh bridge.",
@@ -12,6 +13,7 @@ export const AccordianData = [
     ],
   },
   {
+    id: "2",
     title: "Pulp & Paper Industries:",
     details: [
       "Pulp flow rate control system",
@@ -23,6 +25,7 @@ export const AccordianData = [
     ],
   },
   {
+    id: "3",
     title: "Distilleries & Breweries",
     details: [
       "Digital temperature control & recording system for distillation column.",
@@ -33,6 +36,7 @@ export const AccordianData = [
     ],
   },
   {
+    id: "4",
     title: "Pharmaceuticals",
     details: [
       "Hydrogenator pressure control system with N2 purging.",
@@ -41,6 +45,7 @@ export const AccordianData = [
     ],
   },
   {
+    id: "5ww",
     title: "Food Industries",
     details: [
       "Consistency/ Density control systems.",

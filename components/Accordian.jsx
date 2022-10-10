@@ -1,31 +1,69 @@
 import { React, useState } from "react";
-import { AccordianData } from "./AccordianData";
+// import { item } from "./AccordianData";
 import { IconContext } from "react-icons/lib";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-let AccordianDataArray = AccordianData.map((item) => item.details);
-const list = [];
-// console.log(AccordianDataArray);
+const AccordianData = [
+  {
+    title: "Sugar Mills",
+    details: [
+      "Electronic weigh bridge.",
+      "Conductivity measurement & control systems for batch & continuous pan.",
+      "pH measurement & control at process, feed water etc.",
+      "Imbibition water flow metering systems.",
+      "Juice flow rate control systems before evaporators.",
+      "Centrifuge control systems.",
+    ],
+  },
+  {
+    title: "Pulp & Paper Industries:",
+    details: [
+      "Pulp flow rate control system",
+      "Consistency control system.",
+      "Temperature control systems at drying cylinders.",
+      "Steam pressure reducing & controlling systems.",
+      "Steam flow rate indicating & totalizing systems.",
+      "Moisture & basis weight control systems.",
+    ],
+  },
+  {
+    title: "Distilleries & Breweries",
+    details: [
+      "Digital temperature control & recording system for distillation column.",
+      "Steam flow rate indicating & controlling systems.",
+      "Molasses dilution control systems.",
+      "Wash flow rate indicating & controlling systems.",
+      "Boiler instrumentation & automation.",
+    ],
+  },
+  {
+    title: "Pharmaceuticals",
+    details: [
+      "Hydrogenator pressure control system with N2 purging.",
+      "Hydrogenator sampling system with key operated ball valve.",
+      "Weighing System.",
+    ],
+  },
+  {
+    title: "Food Industries",
+    details: [
+      "Consistency/ Density control systems.",
+      "Pasteurisation Loops.",
+      "Temperature control systems for food pulp.",
+      "Food pulp flow control systems.",
+      "pH measurement & control systems.",
+    ],
+  },
+];
 
-let AccordianDataArrayLength = AccordianDataArray.length;
-for (let i = 0; i < AccordianDataArrayLength; i++) {
-  let items = AccordianDataArray[i].length;
-  for (let n = 0; n < items; n++) {
-    list.push(AccordianDataArray[i][n]);
-  }
-}
-
-// const detailsArr = AccordianDataJson.map((item) => item.details);
-// console.log(detailsArr);
-// detailsArr.map((item) => console.log(item));
 const Accordian = () => {
-  const [clicked, setClicked] = useState(null);
-  const toggle = (index) => {
-    if (clicked === index) {
-      return setClicked(null);
+  const [selected, setSelected] = useState(null);
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null);
     }
 
-    setClicked(index);
+    setSelected(i);
   };
 
   return (
@@ -35,21 +73,25 @@ const Accordian = () => {
         className="flex justify-start items-start my-10"
       >
         <div id="container" className="border-white">
-          {AccordianData.map((item, index) => {
+          {AccordianData.map((product, i) => {
             return (
               <div
-                className="flex flex-col justify-center items-start sm:w-[500px]"
-                key={index}
+                className="flex flex-col justify-center items-start sm:w-[500px] border-x"
+                key={i}
                 onClick={() => {
-                  toggle(index);
+                  toggle(i);
                 }}
               >
-                <div className="w-[100%] font bold text-black flex justify-between cursor-pointer text-xl md:text-3xl bg-white p-4">
-                  {item.title}
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                <div className="w-[100%] font bold text-black flex justify-between cursor-pointer text-xl md:text-3xl bg-white p-4 border-b-2 ">
+                  {product.title}
+                  <span>{selected === i ? <FiMinus /> : <FiPlus />}</span>
                 </div>
-                <div className={clicked === index ? "content show" : "content"}>
-                  {list}
+                <div className={selected === i ? "content show" : "content"}>
+                  <ul className="marker:text-green list-outside list-disc ml-6">
+                    {product.details.map((element, i) => {
+                      return <li key={i}>{element}</li>;
+                    })}
+                  </ul>
                 </div>
               </div>
             );
