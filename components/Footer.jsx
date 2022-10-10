@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div id="footer" className="p-8 bg-white text-black font-bold">
       <div id="wrapper">
-        <div id="row" className="grid grid-cols-2 lg:grid-cols-4">
-          <div id="column" className="flex flex-col text-left ml-16">
+        <div id="row" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          <div id="column" className="flex flex-col text-left">
             <Link href="/about">
               <a className="text-3xl pb-2 cursor-pointer">About Us</a>
             </Link>
@@ -19,8 +19,8 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div id="column" className="flex flex-col text-left ml-16">
-            <Link href="/about">
+          <div id="column" className="flex flex-col text-left">
+            <Link href="/services">
               <a className="text-3xl pb-2">Services</a>
             </Link>
             <Link href="#psg">
@@ -39,9 +39,9 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div id="column" className="flex flex-col text-left ml-16">
+          <div id="column" className="flex flex-col text-left">
             <Link href="/about">
-              <a className="text-3xl pb-2">Products</a>
+              <a className="sm:text-3xl pb-2">Products</a>
             </Link>
             <Link href="#about">
               <a className="text-xl hover:text-cyan-600 ease-in duration-300 cursor-pointer">
