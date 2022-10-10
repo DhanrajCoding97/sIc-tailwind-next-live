@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-// import { item } from "./AccordianData";
 import { IconContext } from "react-icons/lib";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { AccordianData } from "./AccordianData";
