@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { animateScroll as scroll } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,6 +8,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("#34d399");
+
   const toggleHome = () => {
     scroll.scrollToTop();
   };
@@ -44,6 +46,7 @@ const Navbar = () => {
                   width="50"
                   height="50"
                   className="rounded"
+                  onClick={toggleHome}
                 />
               </a>
             </Link>

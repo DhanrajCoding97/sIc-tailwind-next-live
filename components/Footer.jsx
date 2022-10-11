@@ -5,7 +5,10 @@ const Footer = () => {
   return (
     <div id="footer" className="p-8 bg-white text-black font-bold">
       <div id="wrapper">
-        <div id="row" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div
+          id="row"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-5 items-center justify-center"
+        >
           <div id="column" className="flex flex-col text-left">
             <Link href="/sic/about">
               <a className="text-3xl pb-2 cursor-pointer">About Us</a>

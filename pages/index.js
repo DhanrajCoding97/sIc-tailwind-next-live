@@ -7,7 +7,7 @@ export default function Home() {
     <div id="main">
       <Hero
         heading="If you want to buy Electrical or Instrumentation Products."
-        message="You have come to the Right place."
+        message="You came to the Right place."
       />
       <About />
       <Contact />
