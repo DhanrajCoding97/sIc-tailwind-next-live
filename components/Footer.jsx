@@ -7,10 +7,10 @@ const Footer = () => {
       <div id="wrapper">
         <div id="row" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           <div id="column" className="flex flex-col text-left">
-            <Link href="/about">
+            <Link href="/sic/about">
               <a className="text-3xl pb-2 cursor-pointer">About Us</a>
             </Link>
-            <Link href="#about">
+            <Link href="#accordian">
               <a className="text-xl">What we do</a>
             </Link>
             <Link href="#clients">
@@ -20,7 +20,7 @@ const Footer = () => {
             </Link>
           </div>
           <div id="column" className="flex flex-col text-left">
-            <Link href="/services">
+            <Link href="/sic/services">
               <a className="text-3xl pb-2">Services</a>
             </Link>
             <Link href="#psg">
@@ -40,7 +40,7 @@ const Footer = () => {
             </Link>
           </div>
           <div id="column" className="flex flex-col text-left">
-            <Link href="/about">
+            <Link href="/sic/productsw">
               <a className="sm:text-3xl pb-2">Products</a>
             </Link>
             <Link href="#about">
@@ -55,7 +55,7 @@ const Footer = () => {
             </Link>
           </div>
           <div id="column" className="flex flex-col text-left">
-            <Link href="/#contact">
+            <Link href="/sic/contact">
               <a className="text-3xl pb-2">Contact Us</a>
             </Link>
             <div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Accordian from "../../components/Accordian";
+import Clients from "../../components/clients";
 
 const About = () => {
   return (
@@ -19,6 +20,7 @@ const About = () => {
         </p>
       </div>
       <Accordian />
+      <Clients />
     </section>
   );
 };

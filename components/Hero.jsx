@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useRef } from "react";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Hero = ({ heading, message }) => {
   return (
@@ -19,9 +20,14 @@ const Hero = ({ heading, message }) => {
             exact="true"
             offset={-87}
             duration={500}
-            className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black transition ease-in duration-300 cursor-pointer"
           >
-            Get Started
+            <motion.button
+              className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Get started
+            </motion.button>
           </Link>
         </div>
       </div>

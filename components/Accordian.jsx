@@ -23,20 +23,24 @@ const Accordian = () => {
           {AccordianData.map((product, i) => {
             return (
               <div
-                className="flex flex-col sm:w-[500px] border-x"
+                className="flex flex-col sm:w-[500px]"
                 key={i}
                 onClick={() => {
                   toggle(i);
                 }}
               >
-                <div className="w-[100%] font bold text-black border-b-2 border-black last:border-none flex justify-between cursor-pointer text-xl md:text-3xl bg-white p-4">
-                  <h2>{product.title}</h2>
+                <div className="w-[100%] font bold text-black border-b-sky-400 last:border-none flex justify-between cursor-pointer text-xl md:text-3xl bg-white p-4">
+                  <h2 className="font-bold">{product.title}</h2>
                   <span>{selected === i ? <FiMinus /> : <FiPlus />}</span>
                 </div>
                 <div className={selected === i ? "content show" : "content"}>
                   <ul className="marker:text-green list-outside list-disc ml-6 p-2">
                     {product.details.map((element, i) => {
-                      return <li key={i}>{element}</li>;
+                      return (
+                        <li key={i} className="text-xl font-bold">
+                          {element}
+                        </li>
+                      );
                     })}
                   </ul>
                 </div>
