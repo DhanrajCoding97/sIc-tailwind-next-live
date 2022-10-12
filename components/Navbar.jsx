@@ -21,7 +21,7 @@ const Navbar = () => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
         setColor("#ffffff");
-        setTextColor("#292524");
+        setTextColor("#000000");
       } else {
         setColor("transparent");
         setTextColor("#34d399");
@@ -51,39 +51,40 @@ const Navbar = () => {
               </a>
             </Link>
           </div>
-          <Link href="/">
-            <a
-              style={{ color: `${textColor}` }}
-              className="hidden md:block font-bold text-3xl cursor-pointer sm:hover:text-sky-600 ease-in duration-300"
-            >
-              <h1>Star Instruments & Control</h1>
-            </a>
-          </Link>
-        </div>
-        <ul className="hidden sm:flex">
-          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+          <div style={{ color: `${textColor}` }}>
             <Link href="/">
-              <a style={{ color: `${textColor}` }}>Home</a>
+              <a className="hidden md:block font-bold hover:text-rose-600 text-3xl cursor-pointer ease-in duration-300">
+                Star Instruments & Control
+              </a>
+            </Link>
+          </div>
+        </div>
+        <ul className="hidden sm:flex" style={{ color: `${textColor}` }}>
+          <li className="p-4 ">
+            <Link href="/">
+              <a className="font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer hover:text-">
+                Home
+              </a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
             <Link href="/sic/about">
-              <a style={{ color: `${textColor}` }}>About Us</a>
+              <a>About Us</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
             <Link href="/sic/services">
-              <a style={{ color: `${textColor}` }}>Services</a>
+              <a>Services</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
             <Link href="/sic/products">
-              <a style={{ color: `${textColor}` }}>Products</a>
+              <a>Products</a>
             </Link>
           </li>
-          <li className="p-4 text-emerald-400 font-bold hover:text-sky-600 ease-in duration-300 cursor-pointer">
+          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
             <Link href="/sic/contact">
-              <a style={{ color: `${textColor}` }}>Contact Us</a>
+              <a>Contact Us</a>
             </Link>
           </li>
         </ul>
