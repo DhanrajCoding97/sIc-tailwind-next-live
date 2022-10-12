@@ -3,6 +3,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { animateScroll as scroll } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -60,33 +61,88 @@ const Navbar = () => {
           </div>
         </div>
         <ul className="hidden sm:flex" style={{ color: `${textColor}` }}>
-          <li className="p-4 ">
+          <motion.li
+            whileHover={{
+              scale: 1.1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+            className="p-4 "
+          >
             <Link href="/">
               <a className="font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer hover:text-">
                 Home
               </a>
             </Link>
-          </li>
-          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+          >
             <Link href="/sic/about">
               <a>About Us</a>
             </Link>
-          </li>
-          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+          >
             <Link href="/sic/services">
               <a>Services</a>
             </Link>
-          </li>
-          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+          >
             <Link href="/sic/products">
               <a>Products</a>
             </Link>
-          </li>
-          <li className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer">
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+          >
             <Link href="/sic/contact">
               <a>Contact Us</a>
             </Link>
-          </li>
+          </motion.li>
         </ul>
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">

@@ -1,6 +1,7 @@
 import React from "react";
 import Accordian from "../../components/Accordian";
 import Clients from "../../components/clients";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -20,7 +21,6 @@ const About = () => {
         </p>
       </div>
       <Accordian />
-      <Clients />
     </section>
   );
 };
