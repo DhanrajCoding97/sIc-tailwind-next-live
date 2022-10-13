@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import About from "../pages/sic/about";
+import Products from "../pages/sic/products";
 import Contact from "../pages/sic/contact";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         message="You came to the Right place."
       />
       <About />
+      <Products />
       <Contact />
     </div>
   );

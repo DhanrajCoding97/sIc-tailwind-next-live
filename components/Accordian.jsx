@@ -37,7 +37,10 @@ const Accordian = () => {
                   <ul className="marker:text-green list-outside list-disc ml-6 p-2">
                     {product.details.map((element, i) => {
                       return (
-                        <li key={i} className="text-xl font-bold">
+                        <li
+                          key={i}
+                          className="md:text-xl font-bold leading-relaxed"
+                        >
                           {element}
                         </li>
                       );

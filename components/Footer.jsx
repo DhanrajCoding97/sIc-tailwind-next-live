@@ -5,13 +5,10 @@ const Footer = () => {
   return (
     <div id="footer" className="p-8 bg-white text-black font-bold">
       <div id="wrapper">
-        <div
-          id="row"
-          className="grid grid-cols-2 lg:grid-cols-4 gap-5 items-center justify-center"
-        >
+        <div id="row" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           <div id="column" className="flex flex-col text-left">
             <Link href="/sic/about">
-              <a className="text-3xl pb-2 cursor-pointer">About Us</a>
+              <a className="text-3xl pb-2 cursor-pointer hover:">About Us</a>
             </Link>
             <Link href="#accordian">
               <a className="text-xl">What we do</a>
@@ -36,7 +33,7 @@ const Footer = () => {
                 Process Automation Products
               </a>
             </Link>
-            <Link href="#ssp" className="ciu">
+            <Link href="#ssp">
               <a className="text-xl hover:text-cyan-600 ease-in duration-300 cursor-pointer">
                 Sensors & Safety Products
               </a>
@@ -44,7 +41,7 @@ const Footer = () => {
           </div>
           <div id="column" className="flex flex-col text-left">
             <Link href="/sic/productsw">
-              <a className="sm:text-3xl pb-2">Products</a>
+              <a className="text-3xl pb-2">Products</a>
             </Link>
             <Link href="#about">
               <a className="text-xl hover:text-cyan-600 ease-in duration-300 cursor-pointer">
