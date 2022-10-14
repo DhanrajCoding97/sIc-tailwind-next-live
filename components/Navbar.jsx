@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+      className="fixed top-0 w-full z-10 ease-in duration-300"
     >
       <div className="m-auto flex justify-between items-center p-4">
         <div className="flex" onClick={toggleHome}>

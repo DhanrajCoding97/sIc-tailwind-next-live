@@ -11,7 +11,7 @@ const Contact = () => {
       transition={{
         duration: 0.75,
       }}
-      className="mx-[5%] max-w-[1240px] m-auto mt-10"
+      className="mx-[5%] max-w-[1240px] m-auto pt-10 my-10"
     >
       <h1 className="text-2xl md:text-4xl font-bold text-center pb-5">
         Contact Us

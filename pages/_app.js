@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import "../styles/globals.css";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Star Instruments & Control</title>
       </Head>
-      <div>
+      <Layout>
         <AnimatePresence mode="wait">
           <motion.div
             key={router.route}
@@ -36,12 +36,10 @@ function MyApp({ Component, pageProps }) {
               },
             }}
           >
-            <Navbar />
             <Component {...pageProps} />
-            <Footer />
           </motion.div>
         </AnimatePresence>
-      </div>
+      </Layout>
     </>
   );
 }

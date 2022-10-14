@@ -61,7 +61,7 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-      <motion.span className="flex items-center justify-between">
+      <motion.span className="flex items-center justify-center">
         <h2>Connect us on Whatsapp</h2>
         <a href="https://wa.me/918454994241">
           <BsWhatsapp />
