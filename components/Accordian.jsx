@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { IconContext } from "react-icons/lib";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { AccordianData } from "./AccordianData";
+import { motion } from "framer-motion";
 
 const Accordian = () => {
   const [selected, setSelected] = useState(null);
@@ -33,7 +34,11 @@ const Accordian = () => {
                   <h2 className="font-bold">{product.title}</h2>
                   <span>{selected === i ? <FiMinus /> : <FiPlus />}</span>
                 </div>
-                <div className={selected === i ? "content show" : "content"}>
+                <div
+                  animate={{ opacity: 1, transition: { duration: 2 } }}
+                  initial={{ opacity: 0 }}
+                  className={selected === i ? "content show" : "content"}
+                >
                   <ul className="marker:text-green list-outside list-disc ml-6 p-2">
                     {product.details.map((element, i) => {
                       return (

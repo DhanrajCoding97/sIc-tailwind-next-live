@@ -1,5 +1,7 @@
 import { React, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { BsWhatsapp } from "react-icons/bs";
 
 const ContactForm = () => {
   const form = useRef();
@@ -59,6 +61,12 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
+      <motion.span className="flex items-center justify-between">
+        <h2>Connect us on Whatsapp</h2>
+        <a href="https://wa.me/918454994241">
+          <BsWhatsapp />
+        </a>
+      </motion.span>
     </div>
   );
 };
