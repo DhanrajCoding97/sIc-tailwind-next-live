@@ -61,12 +61,19 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-      <motion.span className="flex items-center justify-center">
-        <h2>Connect us on Whatsapp</h2>
-        <a href="https://wa.me/918454994241">
-          <BsWhatsapp />
-        </a>
-      </motion.span>
+      <div className="flex items-center justify-center mt-5">
+        <motion.a
+          href="https://wa.me/918152889614"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="flex items-center justify-center font-bold text-2xl max-w-sm text-center"
+        >
+          Connect us on Whatsapp{" "}
+          <span className=" pl-3">
+            <BsWhatsapp size={25} />
+          </span>
+        </motion.a>
+      </div>
     </div>
   );
 };
