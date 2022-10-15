@@ -43,10 +43,9 @@ const Navbar = () => {
               <a>
                 <Image
                   alt="Star Instruments & Control"
-                  src="/logo.png"
+                  src="/icon.png"
                   width="50"
                   height="50"
-                  className="rounded"
                   onClick={toggleHome}
                 />
               </a>
@@ -145,7 +144,10 @@ const Navbar = () => {
           </motion.li>
         </ul>
         {/* Mobile Button */}
-        <div onClick={handleNav} className="block sm:hidden z-10">
+        <div
+          onClick={handleNav}
+          className="block sm:hidden z-10 cursor-pointer"
+        >
           {nav ? (
             <AiOutlineClose
               size={20}
