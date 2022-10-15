@@ -26,6 +26,7 @@ const ContactForm = () => {
       );
     e.target.reset();
   };
+
   return (
     <div>
       <form ref={form} onSubmit={sendEmail} className="max-w-[80%] m-auto">
@@ -69,7 +70,7 @@ const ContactForm = () => {
           className="flex items-center justify-center font-bold text-2xl max-w-sm text-center"
         >
           Connect us on Whatsapp{" "}
-          <span className=" pl-3">
+          <span className="pl-3">
             <BsWhatsapp size={25} />
           </span>
         </motion.a>
