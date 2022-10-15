@@ -3,6 +3,7 @@ import ServiceCardData from "./ServiceCardData";
 import { motion } from "framer-motion";
 
 const ServicesCard = () => {
+  // card slider
   const [width, setWidth] = useState(0);
   const card = useRef();
 
@@ -27,13 +28,13 @@ const ServicesCard = () => {
           return (
             <motion.div
               key={index}
-              className="mr-14 min-w-[15rem] sm:min-w-[30rem] sm:max-h-[40rem] rounded-3xl"
+              className="mr-14 min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem] rounded-3xl"
             >
               <img
                 src={card.imagePath}
                 alt={card.alt}
                 layout="fill"
-                className="max-h-96 w-full rounded-t-3xl pointer-events-none"
+                className="h-96 w-full rounded-t-3xl pointer-events-none"
               />
               <div
                 id="card-content"
