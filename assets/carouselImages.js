@@ -1,1 +1,0 @@
-import {image1} from "./images/"

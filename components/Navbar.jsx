@@ -149,11 +149,7 @@ const Navbar = () => {
           className="block sm:hidden z-10 cursor-pointer"
         >
           {nav ? (
-            <AiOutlineClose
-              size={20}
-              color="#34d399"
-              style={{ color: `${textColor}` }}
-            />
+            <AiOutlineClose size={20} color="#34d399" />
           ) : (
             <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}

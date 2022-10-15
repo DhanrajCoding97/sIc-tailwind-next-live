@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import About from "../pages/sic/about";
 import Products from "../pages/sic/products";
 import Contact from "../pages/sic/contact";
+import Services from "./sic/services";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         message="You came to the Right place."
       />
       <About />
+      <Services />
       <Products />
       <Contact />
     </div>

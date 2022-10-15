@@ -1,6 +1,8 @@
 import { React, useEffect } from "react";
+import ServicesCard from "../../components/ServicesCard";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 const Services = () => {
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -27,7 +29,8 @@ const Services = () => {
   return (
     <motion.section ref={ref} id="services" className="mx-[5%] m-auto my-10">
       <motion.div animate={animateSection}>
-        <h1>Services</h1>
+        <h1 className="text-2xl md:text-4xl text-center pb-5">Our Services</h1>
+        <ServicesCard />
       </motion.div>
     </motion.section>
   );
