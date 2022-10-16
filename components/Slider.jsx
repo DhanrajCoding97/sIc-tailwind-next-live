@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { SliderData } from "../components/SliderData";
 import Image from "next/image";
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -41,25 +41,25 @@ const Slider = ({ slides }) => {
                   : "opacity-0"
               }
             >
-              <div className="relative flex flex-col text-center justify-center">
-                <BsArrowLeftCircle
+              <div className="relative flex justify-center p-4">
+                <GoArrowLeft
                   onClick={prevSlide}
-                  size={40}
-                  className="absolute top-[50%] left-[30px] text-white cursor-pointer select-none z-[2]"
+                  size={30}
+                  className="absolute top-[50%] left-[30px] text-emerald-400 cursor-pointer select-none z-[2]"
                 />
                 {index === current && (
                   <Image
                     src={slide.image}
                     alt={slide.caption}
-                    objectFit="cover"
-                    height="600"
                     width="1440"
+                    height="600"
+                    objectFit="cover"
                   />
                 )}
-                <BsArrowRightCircle
+                <GoArrowRight
                   onClick={nextSlide}
-                  size={40}
-                  className="absolute top-[50%] right-[30px] text-white cursor-pointer select-none z-[2]"
+                  size={30}
+                  className="absolute top-[50%] right-[30px] text-emerald-400 cursor-pointer select-none z-[2]"
                 />
               </div>
             </div>

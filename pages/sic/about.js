@@ -1,4 +1,6 @@
 import { React, useEffect } from "react";
+import Slider from "../../components/Slider";
+import { SliderData } from "../../components/SliderData";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -39,23 +41,14 @@ const About = () => {
       </div>
       <motion.div animate={animateSection}>
         <div id="project-list" className=" mt-4">
-          <h3 className="md:text-xl font-bold py-4">
+          <h3 className="md:text-xl font-bold">
             We take up turnkey projects in Control & Automation Projects for
             Process Industries like -
           </h3>
-          <ol className="space-y-1 max-w-md list-decimal list-inside font-bold">
-            <li>Sugar Industries</li>
-            <li>Paper Board Industries</li>
-            <li>Distilleries & Breweries</li>
-            <li>Cement & Petrochemicals</li>
-            <li>Pharmaceuticals & Fertilizers</li>
-            <li>Milk</li>
-            <li>Food Industries</li>
-            <li>Machine Tool Industries</li>
-          </ol>
+          <Slider slides={SliderData} />
         </div>
-        <div id="customer list" className="py-5">
-          <h3 className="md:text-xl font-bold py-3">Our customer list</h3>
+        <div id="customer list">
+          <h3 className="md:text-xl font-">Our customer list</h3>
           <ol className="space-y-1 max-w-md list-decimal list-inside font-bold">
             <li>Ranna Sugars , Mudhol</li>
             <li>Hira Sugars , Sankeshwar , Belgaum</li>

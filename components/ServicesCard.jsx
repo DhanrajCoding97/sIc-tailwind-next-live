@@ -76,17 +76,24 @@ const ServicesCard = () => {
                         cursor="pointer"
                       />
                     </motion.button>
-                    <motion.div id="modal-body">
+                    <motion.div id="modal-body" className="z-[2]">
                       <motion.div
                         id="modal-content"
-                        className="flex flex-col items-center"
+                        className="flex flex-col items-center z-[3]"
                       >
-                        <p className="text-3xl font-bold text-white">
+                        <p className="text-md sm:text-3xl font-bold text-white">
                           {card.alt} list
                         </p>
                         <ul className="marker:text-green list-outside list-disc ml-6 p-2 font-bold text-md leading-relaxed text-white">
                           {card.description.map((item, index) => {
-                            return <motion.li key={index}>{item}</motion.li>;
+                            return (
+                              <motion.li
+                                className="text-sm sm:text-md lg:text-xl leading-relaxed"
+                                key={index}
+                              >
+                                {item}
+                              </motion.li>
+                            );
                           })}
                         </ul>
                       </motion.div>
