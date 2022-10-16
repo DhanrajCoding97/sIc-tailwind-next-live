@@ -18,6 +18,12 @@ const ServicesCard = () => {
   //card open code
   const [openedCard, setOpenedCard] = useState(null);
 
+  const handleCard = () => {
+    setOpenedCard(card.id);
+    setOpenModal(!openModal);
+    console.log(openModal);
+    console.log(openedCard);
+  };
   return (
     <motion.div
       id="cards"
@@ -36,20 +42,18 @@ const ServicesCard = () => {
               key={card.id}
               transition={{ layout: { duration: 1, type: "spring" } }}
               layout
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="mr-14 min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem] cursor-pointer"
+              className="mr-14 min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem]"
               onClick={() => {
-                openedCard = card.id
+                setOpenedCard(card.id);
                 setOpenModal(!openModal);
-                console.log(openModal);
-                console.log(openedCard);
               }}
             >
-              <img
+              <motion.img
                 src={card.imagePath}
                 alt={card.alt}
                 layout="fill"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className="h-96 w-full rounded-3xl"
               />
               {/* card modal on click logic */}
@@ -63,7 +67,10 @@ const ServicesCard = () => {
                     className="rounded-2xl bg-black p-6 flex flex-col "
                   >
                     <motion.button
-                      onClick={() => setOpenModal(false)}
+                      onClick={() => {
+                        openedCard === null;
+                        setOpenModal(!openModal);
+                      }}
                       className="ml-auto"
                     >
                       <AiFillCloseCircle
