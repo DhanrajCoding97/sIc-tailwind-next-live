@@ -17,13 +17,7 @@ const ServicesCard = () => {
 
   //card open code
   const [openedCard, setOpenedCard] = useState(null);
-
-  const handleCard = () => {
-    setOpenedCard(card.id);
-    setOpenModal(!openModal);
-    console.log(openModal);
-    console.log(openedCard);
-  };
+  
   return (
     <motion.div
       id="cards"
