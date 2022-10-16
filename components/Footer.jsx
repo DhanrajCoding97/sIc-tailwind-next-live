@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div id="footer" className="p-8 bg-white text-black font-bold">
-      <div id="wrapper">
-        <div id="row" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-          <div id="column" className="flex flex-col text-left">
+    <footer id="footer" className="bg-white text-black font-bold">
+      <div className="content-center md:px-10 xl:px-40">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+          <div id="column">
             <Link href="/sic/about">
               <a className="text-3xl pb-2 cursor-pointer hover:">About Us</a>
             </Link>
@@ -19,7 +19,7 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div id="column" className="flex flex-col text-left">
+          <div id="column">
             <Link href="/sic/services">
               <a className="text-3xl pb-2">Services</a>
             </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div id="column" className="flex flex-col text-left">
+          <div id="column">
             <Link href="/sic/productsw">
               <a className="text-3xl pb-2">Products</a>
             </Link>
@@ -54,16 +54,14 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div id="column" className="flex flex-col text-left">
+          <div id="column">
             <Link href="/sic/contact">
               <a className="text-3xl pb-2">Contact Us</a>
             </Link>
+            <p>#2914/A 13th Main 2nd Cross 2nd Stage D-Block , Rajajinagar</p>
+            <span>Bangalore</span>
             <div>
-              <p>#2914/A 13th Main 2nd Cross 2nd Stage D-Block , Rajajinagar</p>
-              <span>Bangalore</span>
-            </div>
-            <div>
-              <span className="flex flex-col">
+              <span>
                 <a
                   href="tel:+919448383066"
                   className="text-xl hover:text-cyan-600 ease-in duration-300 cursor-pointer"
@@ -80,8 +78,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="flex justify-center text-center p-5">
+          <a href="/" title="Star Instruments & Control Logo">
+            <img src="/icon.png" className="h-[25px] w-[25px]" />
+          </a>
+          <h1 className="pl-1 text-md">
+            Copyright &copy; {new Date().getFullYear()}
+          </h1>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
