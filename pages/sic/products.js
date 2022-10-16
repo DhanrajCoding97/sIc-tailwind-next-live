@@ -27,7 +27,7 @@ const Products = () => {
   }, [inView]);
 
   return (
-    <motion.section ref={ref} className="mx-[5%] m-auto my-10">
+    <motion.section ref={ref} className="mx-[5%] mt-24">
       <div className="mx-[5%]font-bold mx-[5%]">
         <h1 className="text-2xl md:text-4xl text-center pb-5">Our Products</h1>
         <motion.div animate={animateSection}>

@@ -26,9 +26,9 @@ const About = () => {
   }, [inView]);
 
   return (
-    <motion.section ref={ref} id="about" className="mx-[5%] m-auto my-10">
+    <motion.section ref={ref} id="about" className="mx-[5%] mt-24">
       <div id="about-description">
-        <h1 className="text-2xl md:text-4xl text-center border-double border-b-white font-bold border-emerald-40 underline pb-5">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
           About Us
         </h1>
         <h2 className="md:text-xl font-bold">

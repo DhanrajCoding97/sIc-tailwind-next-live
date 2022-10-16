@@ -22,7 +22,7 @@ const ServicesCard = () => {
     <motion.div
       id="cards"
       ref={card}
-      className="overflow-hidden sm:mx-[20%] rounded-3xl"
+      className="overflow-hidden sm:mx-[20%] mb-8"
     >
       <motion.div
         drag="x"
@@ -36,17 +36,21 @@ const ServicesCard = () => {
               key={card.id}
               transition={{ layout: { duration: 1, type: "spring" } }}
               layout
-              className="mr-14 min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem] rounded-3xl"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="mr-14 min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem] cursor-pointer"
               onClick={() => {
-                setOpenModal(true);
-                setOpenedCard(card.id);
+                openedCard = card.id
+                setOpenModal(!openModal);
+                console.log(openModal);
+                console.log(openedCard);
               }}
             >
               <img
                 src={card.imagePath}
                 alt={card.alt}
                 layout="fill"
-                className="h-96 w-full rounded-t-3xl"
+                className="h-96 w-full rounded-3xl"
               />
               {/* card modal on click logic */}
               {openedCard === card.id && openModal ? (
