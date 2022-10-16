@@ -17,7 +17,7 @@ const ServicesCard = () => {
 
   //card open code
   const [openedCard, setOpenedCard] = useState(null);
-  
+
   return (
     <motion.div
       id="cards"
@@ -54,7 +54,10 @@ const ServicesCard = () => {
               {openedCard === card.id && openModal ? (
                 <motion.div
                   id="modal-bg"
-                  className="fixed top-0 right-0 left-0 bottom-0 w-[90vw] h-[80vh] bg-lime-500 flex justify-center items-center rounded-2xl"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, type: "spring" }}
+                  className="fixed z-[1] left-0 top-0 w-[90vw] h:screen md:h-[80vh] bg-lime-500 flex justify-center items-center rounded-2xl"
                 >
                   <motion.div
                     id="modal-container"
