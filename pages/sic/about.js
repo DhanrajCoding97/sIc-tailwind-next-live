@@ -1,8 +1,8 @@
 import { React, useEffect } from "react";
-import Slider from "../../components/Slider";
-import { SliderData } from "../../components/SliderData";
 import { motion, useAnimation } from "framer-motion";
+import { SliderData } from "../../components/SliderData";
 import { useInView } from "react-intersection-observer";
+import ProjectCards from "../../components/ProjectCards";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -45,7 +45,7 @@ const About = () => {
             We take up turnkey projects in Control & Automation Projects for
             Process Industries like -
           </h3>
-          <Slider slides={SliderData} />
+          <ProjectCards cards={SliderData} />
         </div>
         <div id="customer list">
           <h3 className="md:text-xl font-">Our customer list</h3>
