@@ -50,7 +50,7 @@ const About = () => {
           </div>
           <div id="customer list">
             <h3 className="sm:text-xl md:text-3xl font-bold text-center">
-              Our customer list
+              Our Customers
             </h3>
             <div
               id="customer-list-flex"

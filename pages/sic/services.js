@@ -27,7 +27,11 @@ const Services = () => {
   }, [inView]);
 
   return (
-    <motion.section ref={ref} id="services" className="mx-[5%] mt-10">
+    <motion.section
+      ref={ref}
+      id="services"
+      className="mx-[5%] mt-10 flex flex-col items-center justify-center"
+    >
       <motion.div animate={animateSection}>
         <h1 className="text-2xl md:text-4xl text-center pb-5">Our Services</h1>
         <ServicesCard />
