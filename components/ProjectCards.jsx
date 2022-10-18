@@ -1,7 +1,10 @@
 import { React, useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { SliderData } from "./SliderData";
 
-const ProjectCards = ({ cards }) => {
+console.log(SliderData);
+
+const ProjectCards = () => {
   // card slider code
   const [width, setWidth] = useState(0);
   const card = useRef();
@@ -15,7 +18,7 @@ const ProjectCards = ({ cards }) => {
       id="cards"
       ref={card}
       whileTap={{ cursor: "grabbing" }}
-      className="overflow-hidden sm:mx-[5%] mb-8 cursor-grab my-10 rounded-3xl"
+      className="overflow-hidden sm:mx-[5%] my-16 cursor-grab rounded-3xl"
     >
       <motion.div
         drag="x"
@@ -23,13 +26,13 @@ const ProjectCards = ({ cards }) => {
         id="inner-card"
         className="flex"
       >
-        {cards.map((card, index) => {
+        {SliderData.map((card, index) => {
           return (
             <motion.div
               key={index}
               transition={{ layout: { duration: 1, type: "spring" } }}
               layout
-              className="max-h-[35rem] min-w-[30rem] p-10"
+              className="max-h-[35rem] min-w-[30rem]"
             >
               <motion.img
                 src={card.image}

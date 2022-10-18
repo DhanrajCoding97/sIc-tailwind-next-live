@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import ContactForm from "../../components/Contact";
+import ContactForm from "../components/Contact";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -27,7 +27,7 @@ const Contact = () => {
   }, [inView]);
 
   return (
-    <motion.section ref={ref} id="contact" className="mx-[5%] mt-10">
+    <motion.section ref={ref} id="contact" className="mx-[5%] mt-20">
       <h1 className="text-2xl md:text-4xl font-bold text-center pb-5">
         Contact Us
       </h1>

@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import ProductCatalog from "../../components/ProductCatalog";
+import ProductCatalog from "../components/ProductCatalog";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -27,7 +27,7 @@ const Products = () => {
   }, [inView]);
 
   return (
-    <motion.section ref={ref} className="mx-[5%] mt-10">
+    <motion.section ref={ref} className="mx-[5%] mt-20">
       <div className="mx-[5%]font-bold mx-[5%]">
         <h1 className="text-2xl md:text-4xl text-center pb-5">Our Products</h1>
         <motion.div animate={animateSection}>

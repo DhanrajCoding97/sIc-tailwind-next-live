@@ -1,8 +1,8 @@
 import Hero from "../components/Hero";
-import About from "../pages/sic/about";
-import Products from "../pages/sic/products";
-import Contact from "../pages/sic/contact";
-import Services from "./sic/services";
+import About from "./about";
+import Services from "./services";
+import Products from "./products";
+import Contact from "./contact";
 
 export default function Home() {
   return (

@@ -1,8 +1,7 @@
 import { React, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { SliderData } from "../../components/SliderData";
 import { useInView } from "react-intersection-observer";
-import ProjectCards from "../../components/ProjectCards";
+import ProjectCards from "../components/ProjectCards";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -28,7 +27,7 @@ const About = () => {
   }, [inView]);
 
   return (
-    <motion.section ref={ref} id="about" className="mx-[5%] mt-10">
+    <motion.section ref={ref} id="about" className="mx-[5%] mt-20">
       <motion.div animate={animateSection}>
         <div id="about-description">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
@@ -46,17 +45,17 @@ const About = () => {
               We take up turnkey projects in Control & Automation Projects for
               Process Industries like -
             </h3>
-            <ProjectCards cards={SliderData} />
+            <ProjectCards />
           </div>
-          <div id="customer list">
+          <div id="clients">
             <h3 className="sm:text-xl md:text-3xl font-bold text-center">
               Our Customers
             </h3>
             <div
               id="customer-list-flex"
-              className="flex justify-center items-center flex-wrap mt-5"
+              className="grid sm:grid-cols-2 items-center justify-items-center mt-5"
             >
-              <ul className="list-disc sm:text-lg mr-[5%]">
+              <ul className="list-disc sm:text-lg">
                 <li>Ranna Sugars , Mudhol</li>
                 <li>Hira Sugars , Sankeshwar , Belgaum</li>
                 <li>Siddapur Disttileries , Jamkhandi</li>

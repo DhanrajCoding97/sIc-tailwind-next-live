@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="content-center p-4 md:px-10 xl:px-40">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
           <div id="column" className="flex flex-col items-center">
-            <Link href="/sic/about">
+            <Link href="/about">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -18,9 +18,9 @@ const Footer = () => {
                 About Us
               </motion.a>
             </Link>
-            <Link href="#accordian">
+            <Link href="#about">
               <a className="sm:text-xl hover:text-violet-900 ease-in duration-300 cursor-pointer">
-                What we do
+                Our expertise
               </a>
             </Link>
             <Link href="#clients">
@@ -30,7 +30,7 @@ const Footer = () => {
             </Link>
           </div>
           <div id="column" className="flex flex-col items-center">
-            <Link href="/sic/services">
+            <Link href="/services">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -39,24 +39,24 @@ const Footer = () => {
                 Services
               </motion.a>
             </Link>
-            <Link href="#psg">
+            <Link href="#services">
               <a className="sm:text-xl hover:text-violet-900 ease-in duration-300 cursor-pointer">
                 Product Supply Group (PSG)
               </a>
             </Link>
-            <Link href="#pap">
+            <Link href="#services">
               <a className="sm:text-xl hover:text-violet-900 ease-in duration-300 cursor-pointer">
                 Process Automation Products
               </a>
             </Link>
-            <Link href="#ssp">
+            <Link href="#services">
               <a className="sm:text-xl hover:text-violet-900 ease-in duration-300 cursor-pointer">
                 Sensors & Safety Products
               </a>
             </Link>
           </div>
           <div id="column" className="flex flex-col items-center">
-            <Link href="/sic/productsw">
+            <Link href="/products">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -67,7 +67,7 @@ const Footer = () => {
             </Link>
             <Link href="#about">
               <a className="sm:text-xl hover:text-violet-900 ease-in duration-300 cursor-pointer">
-                What we do
+                Our expertise
               </a>
             </Link>
             <Link href="#clients">
@@ -77,7 +77,7 @@ const Footer = () => {
             </Link>
           </div>
           <div id="column" className="flex flex-col">
-            <Link href="/sic/contact">
+            <Link href="/contact">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
