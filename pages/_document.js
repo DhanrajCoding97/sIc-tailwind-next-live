@@ -11,7 +11,7 @@ export default function Document() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
           rel="stylesheet"
         ></link>
         <meta property="og:title" content="Star Instruments & Control" />
