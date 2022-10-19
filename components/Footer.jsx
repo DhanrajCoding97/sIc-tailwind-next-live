@@ -7,13 +7,16 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer id="footer" className="bg-white text-black font-bold">
-      <div className="grid grid-cols-2 sm:grid-cols-4 justify-evenly">
-        <div id="column" className="flex flex-col">
+      <div className="grid grid-cols-1 sm:grid-cols-4 items-center justify-center">
+        <div
+          id="column"
+          className="flex flex-col items-center justify-center p-5"
+        >
           <Link href="/about">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-xl sm:text-2xl lg:text-3xl pb-2 cursor-pointer"
+              className="text-xl sm:text-2xl lg:text-3xl cursor-pointer"
             >
               About Us
             </motion.a>
@@ -29,12 +32,15 @@ const Footer = () => {
             </a>
           </Link>
         </div>
-        <div id="column" className="flex flex-col">
+        <div
+          id="column"
+          className="flex flex-col items-center justify-center p-5"
+        >
           <Link href="/services">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-xl sm:text-2xl lg:text-3xl pb-2 cursor-pointer"
+              className="text-xl sm:text-2xl lg:text-3xl cursor-pointer"
             >
               Services
             </motion.a>
@@ -55,17 +61,17 @@ const Footer = () => {
             </a>
           </Link>
         </div>
-        <div id="column" className="flex flex-col">
+        <div id="column" className="flex flex-col items-center justify-center">
           <Link href="/products">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-xl sm:text-2xl lg:text-3xl pb-2 cursor-pointer"
+              className="text-xl sm:text-2xl lg:text-3xl cursor-pointer"
             >
               Products
             </motion.a>
           </Link>
-          <ul>
+          <ul className="flex flex-col justify-center items-center">
             <li>
               <Link href="/products">
                 <a className="sm:text-xl hover:text-emerald-400 ease-in duration-300 cursor-pointer">
@@ -103,12 +109,15 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div id="column" className="flex flex-col">
+        <div
+          id="column"
+          className="flex flex-col items-center justify-center p-5"
+        >
           <Link href="/contact">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-xl sm:text-2xl lg:text-3xl pb-2 cursor-pointer"
+              className="text-xl sm:text-2xl lg:text-3xl cursor-pointer"
             >
               Contact Us
             </motion.a>
@@ -146,7 +155,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center p-2">
         <Link href="/" title="Star Instruments & Control Logo">
           <Image src="/icon.png" height="35" width="35" objectFit="cover" />
         </Link>
