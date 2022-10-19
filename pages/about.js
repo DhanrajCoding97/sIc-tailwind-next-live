@@ -2,8 +2,7 @@ import { React, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { SliderData } from "../components/SliderData";
-import { ProjectCards } from "../components/ProjectCards";
-
+import { ProjectCarousel } from "../components/ProjectCarousel";
 const About = () => {
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -47,7 +46,7 @@ const About = () => {
               Process Industries like -
             </h3>
           </div>
-          <ProjectCards slides={SliderData} />
+          <ProjectCarousel slides={SliderData} />
           <div id="clients">
             <h3 className="sm:text-xl md:text-3xl font-bold text-center">
               Our Customers
