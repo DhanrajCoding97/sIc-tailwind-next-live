@@ -4,7 +4,7 @@ import { SliderData } from "../components/SliderData";
 import { ProjectCarousel } from "../components/ProjectCarousel";
 const About = () => {
   return (
-    <motion.section ref={ref} id="about" className="mx-[5%] mt-20">
+    <motion.section id="about" className="mx-[5%] mt-20">
       <motion.div>
         <div id="about-description">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">

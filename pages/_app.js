@@ -1,19 +1,15 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+import Layout from "../components/Layout";
 import "../styles/globals.css";
-import { Layout } from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
   return (
-    <>
+    <Layout>
       <Head>
         <title>Star Instruments & Control</title>
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

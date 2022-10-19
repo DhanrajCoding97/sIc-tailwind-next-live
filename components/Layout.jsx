@@ -4,11 +4,11 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div id="content">
+    <>
       <Navbar />
       {children}
       <Footer />
-    </div>
+    </>
   );
 };
 
