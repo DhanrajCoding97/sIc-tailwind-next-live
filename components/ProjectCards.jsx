@@ -1,52 +1,52 @@
-import { React, useRef, useEffect, useState } from "react";
+import { React, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaArrowAltClircleRight, FaArrowAltClircleLeft } from "react-icons/fa";
 import { SliderData } from "./SliderData";
 
-console.log(SliderData);
+export const ProjectCards = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-const ProjectCards = () => {
-  // card slider code
-  const [width, setWidth] = useState(0);
-  const card = useRef();
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
 
-  useEffect(() => {
-    setWidth(card.current.scrollWidth - card.current.offsetWidth);
-  }, []);
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
 
   return (
-    <motion.div
-      id="cards"
-      ref={card}
-      whileTap={{ cursor: "grabbing" }}
-      className="overflow-hidden sm:mx-[5%] my-16 cursor-grab rounded-3xl"
-    >
-      <motion.div
-        drag="x"
-        dragConstraints={{ right: 0, left: -width }}
-        id="inner-card"
-        className="flex"
-      >
-        {SliderData.map((card, index) => {
-          return (
-            <motion.div
-              key={index}
-              transition={{ layout: { duration: 1, type: "spring" } }}
-              layout
-              className="max-h-[35rem] min-w-[30rem]"
-            >
-              <motion.img
-                src={card.image}
-                alt={card.alt}
-                layout="fill"
-                className="w-full h-full rounded-3xl pointer-events-none"
-                whileHover={{ scale: 1.1 }}
+    <motion.div className=" relative h-[80vh] flex center justify-center">
+      <FaArrowAltClircleRight
+        className="absolute top-[50%] right-[32px] text-5xl text-white select-none cursor-pointer z-10"
+        onClick={nextSlide}
+      />
+      <FaArrowAltClircleLeft
+        className="absolute top-[50%] left-[32px] text-5xl text-white select-none cursor-pointer z-10"
+        onClick={prevSlide}
+      />
+      {SliderData.map((slide, index) => {
+        return (
+          <div>
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+            {index === current && (
+              <Image
+                src={slide.image}
+                alt={slide.caption}
+                layout="responsive"
+                width="1000"
+                height="600"
+                className="rounded-xl"
               />
-            </motion.div>
-          );
-        })}
-      </motion.div>
+            )}
+          </div>
+        );
+      })}
     </motion.div>
   );
 };
-
-export default ProjectCards;
