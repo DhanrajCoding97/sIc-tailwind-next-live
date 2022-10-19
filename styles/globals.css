@@ -38,3 +38,15 @@ body {
   transition: all 0.5s cubic-bezier(1,0,1,0);
 }
 
+.slide {
+  position: relative;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+

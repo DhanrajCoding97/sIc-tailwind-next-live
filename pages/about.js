@@ -1,7 +1,7 @@
 import { React, useEffect } from "react";
 import { motion } from "framer-motion";
 import { SliderData } from "../components/SliderData";
-import { ProjectCarousel } from "../components/ProjectCarousel";
+import ImageSlider from "../components/ImageSlider";
 const About = () => {
   return (
     <motion.section id="about" className="mx-[5%] mt-20">
@@ -16,14 +16,14 @@ const About = () => {
             Industrial Automation
           </h2>
         </div>
+        <div id="project-list" className="mt-4">
+          <h3 className="md:text-xl font-bold">
+            We take up turnkey projects in Control & Automation Projects for
+            Process Industries like -
+          </h3>
+          <ImageSlider slides={SliderData} />
+        </div>
         <motion.div>
-          <div id="project-list" className="mt-4">
-            <h3 className="md:text-xl font-bold">
-              We take up turnkey projects in Control & Automation Projects for
-              Process Industries like -
-            </h3>
-          </div>
-          <ProjectCarousel slides={SliderData} />
           <div id="clients">
             <h3 className="sm:text-xl md:text-3xl font-bold text-center">
               Our Customers
