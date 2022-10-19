@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsWhatsapp } from "react-icons/bs";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -120,7 +121,12 @@ const Footer = () => {
         </div>
         <div className="flex justify-center text-center p-5">
           <Link href="/" title="Star Instruments & Control Logo">
-            <img src="/icon.png" className="h-[25px] w-[25px]" />
+            <Image
+              src="/icon.png"
+              height="30"
+              width="30"
+              className="h-[25px] w-[25px]"
+            />
           </Link>
           <h1 className="pl-1 text-md">
             Copyright &copy; {new Date().getFullYear()}

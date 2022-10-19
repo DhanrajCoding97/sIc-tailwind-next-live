@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SliderData } from "./SliderData";
-import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/fa";
+import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import Image from "next/image";
 
 const ImageSlider = ({ slides }) => {
