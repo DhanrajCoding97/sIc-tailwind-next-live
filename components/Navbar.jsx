@@ -90,7 +90,7 @@ const Navbar = () => {
             }}
             className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
           >
-            <Link href="/sic/about">
+            <Link href="/about">
               <a>About Us</a>
             </Link>
           </motion.li>
@@ -106,7 +106,7 @@ const Navbar = () => {
             }}
             className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
           >
-            <Link href="/sic/services">
+            <Link href="/services">
               <a>Services</a>
             </Link>
           </motion.li>
@@ -122,7 +122,7 @@ const Navbar = () => {
             }}
             className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
           >
-            <Link href="/sic/products">
+            <Link href="/products">
               <a>Products</a>
             </Link>
           </motion.li>
@@ -138,7 +138,7 @@ const Navbar = () => {
             }}
             className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
           >
-            <Link href="/sic/contact">
+            <Link href="/contact">
               <a>Contact Us</a>
             </Link>
           </motion.li>
