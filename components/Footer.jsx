@@ -9,14 +9,13 @@ const Footer = () => {
       <div className="content-center p-4 md:px-10 xl:px-40">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
           <div id="column" className="flex flex-col items-center">
-            <Link href="/about">
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-xl sm:text-2xl lg:text-3xl pb-2 cursor-pointer"
-              >
-                About Us
-              </motion.a>
+            <Link
+              href="/about"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-xl sm:text-2xl lg:text-3xl pb-2 cursor-pointer"
+            >
+              About Us
             </Link>
             <Link href="#about">
               <a className="sm:text-xl hover:text-violet-900 ease-in duration-300 cursor-pointer">

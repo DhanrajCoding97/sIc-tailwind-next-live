@@ -31,9 +31,10 @@ const ProjectCards = ({ slides }) => {
       />
       {SliderData.map((slide, index) => {
         return (
-          <div>
+          <div
             className={index === current ? "slide active" : "slide"}
             key={index}
+          >
             {index === current && (
               <Image
                 src={slide.image}
