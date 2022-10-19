@@ -39,6 +39,7 @@ body {
 }
 
 .slide {
+  width: 60vw;
   position: relative;
   opacity: 0;
   transition-duration: 1s ease;

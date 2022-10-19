@@ -20,13 +20,13 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <div className="relative bg-black">
+    <div className="relative my-16 grid justify-center items-center">
       <AiOutlineDoubleLeft
-        className="absolute top-[50%] left-[32px] text-5xl text-white z-10 select-none cursor-pointer"
+        className="absolute top-[50%] left-0 text-5xl text-white z-10 select-none cursor-pointer"
         onClick={prevSlide}
       />
       <AiOutlineDoubleRight
-        className="absolute top-[50%] right-[32px] text-5xl text-white z-10 select-none cursor-pointer"
+        className="absolute top-[50%] right-0 text-5xl text-white z-10 select-none cursor-pointer"
         onClick={nextSlide}
       />
       {SliderData.map((slide, index) => {
@@ -36,14 +36,17 @@ const ImageSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <div className="bg-gradient-to-r from-purple-900 to-green-700 h-96 w-full relative">
+              <div className="bg-gradient-to-r from-[#1A2980] to-[#26D0CE] h-96 w-full relative">
                 <Image
                   src={slide.image}
                   alt={slide.caption}
-                  className=" w-full h-96 absolute object-cover mix-blend-overlay"
+                  className=" w-full h-96 absolute top-[50%] object-cover mix-blend-overlay"
                   layout="fill"
                 />
-                <span id="caption" className="text-3xl font-bold text-black">
+                <span
+                  id="caption"
+                  className="absolute bottom-[40%] left-[40%] text-xl sm:text-3xl font-bold text-yellow-200"
+                >
                   {slide.caption}
                 </span>
               </div>
