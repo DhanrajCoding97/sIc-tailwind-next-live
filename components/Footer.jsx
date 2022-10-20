@@ -147,9 +147,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <a href="/" title="Star Instruments & Control Logo">
+            <Link href="/" title="Star Instruments & Control Logo">
               <Image src="/icon.png" height="35" width="35" objectFit="cover" />
-            </a>
+            </Link>
 
             <h1 className="pl-1 text-md">
               Copyright &copy; {new Date().getFullYear()}
