@@ -174,7 +174,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/sic/about">
+              <Link href="/about">
                 <a
                   onClick={handleNav}
                   className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
@@ -184,7 +184,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/sic/about">
+              <Link href="/about">
                 <a
                   onClick={handleNav}
                   className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
@@ -194,7 +194,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/sic/products">
+              <Link href="/products">
                 <a
                   onClick={handleNav}
                   className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
@@ -204,7 +204,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/sic/contact">
+              <Link href="/contact">
                 <a
                   onClick={handleNav}
                   className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"
