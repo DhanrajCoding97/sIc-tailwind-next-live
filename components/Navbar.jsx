@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("#34d399");
+  const [color, setColor] = useState("#000000");
+  const [textColor, setTextColor] = useState("#21E1E1");
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -24,8 +24,8 @@ const Navbar = () => {
         setColor("#ffffff");
         setTextColor("#000000");
       } else {
-        setColor("transparent");
-        setTextColor("#34d399");
+        setColor("#000000");
+        setTextColor("#21E1E1");
       }
     };
     window.addEventListener("scroll", changeColor);

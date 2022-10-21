@@ -2,10 +2,11 @@ import { React, useEffect } from "react";
 import { motion } from "framer-motion";
 import { SliderData } from "../components/SliderData";
 import ImageSlider from "../components/ImageSlider";
+
 const About = () => {
   return (
-    <motion.section id="about" className="mx-[5%] mt-20">
-      <motion.div>
+    <motion.section id="about" className="sm:pt-[90px] px-[5vw]">
+      <motion.div className=" pt-10">
         <div id="about-description">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
             About Us

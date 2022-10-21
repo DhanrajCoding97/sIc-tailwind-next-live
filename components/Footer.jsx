@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="p-10 text-white">
         <div className="max-w-7xl mx-auto border-t-2">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-4 items-center">
-            <div className="mb-5">
+            <div className="mb-5 flex flex-col sm:items-center sm:justify-center">
               <Link href="/about">
                 <a className="text-xl sm:text-2xl lg:text-3xl cursor-pointer hover:text-emerald-400 ease duration-300">
                   About Us
@@ -33,7 +33,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mb-5">
+            <div className="mb-5 flex flex-col sm:items-center sm:justify-center">
               <Link href="/services">
                 <a className="text-xl sm:text-2xl lg:text-3xl cursor-pointer hover:text-emerald-400 ease duration-300">
                   Services
@@ -63,7 +63,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mb-5">
+            <div className="mb-5 flex flex-col sm:items-center sm:justify-center">
               <Link href="/products">
                 <a className="text-xl sm:text-2xl lg:text-3xl cursor-pointer hover:text-emerald-400 ease duration-300">
                   Products
@@ -107,7 +107,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mb-5">
+            <div className="mb-5 flex flex-col sm:items-center sm:justify-center">
               <Link href="/contact">
                 <a className="text-xl sm:text-2xl lg:text-3xl cursor-pointer hover:text-emerald-400 ease duration-300">
                   Contact Us
@@ -150,7 +150,6 @@ const Footer = () => {
             <Link href="/" title="Star Instruments & Control Logo">
               <Image src="/icon.png" height="35" width="35" objectFit="cover" />
             </Link>
-
             <h1 className="pl-1 text-md">
               Copyright &copy; {new Date().getFullYear()}
             </h1>
