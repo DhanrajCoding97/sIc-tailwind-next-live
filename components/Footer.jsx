@@ -9,7 +9,7 @@ const Footer = () => {
     <footer>
       <div className="p-10 text-white">
         <div className="max-w-7xl mx-auto border-t-2">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-4 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-4">
             <div className="mb-5 flex flex-col sm:items-center sm:justify-center">
               <Link href="/about">
                 <a className="text-xl sm:text-2xl lg:text-3xl cursor-pointer hover:text-emerald-400 ease duration-300">
