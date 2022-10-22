@@ -11,10 +11,10 @@ const ServicesCard = () => {
   const [openedCard, setOpenedCard] = useState(null);
 
   return (
-    <motion.div id="cards" className="mb-8 w-[100vw] h-[100vh grid">
+    <motion.div id="cards" className="mb-8 grid">
       <motion.div
         id="inner-card"
-        className="flex flex-col lg:flex-row justify-around items-center flex-wrap"
+        className="flex flex-col lg:flex-row justify-evenly items-center flex-wrap gap-5"
       >
         {ServiceCardData.map((card) => {
           return (

@@ -177,7 +177,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/services">
                 <a
                   onClick={handleNav}
                   className="text-4xl text-emerald-400 font-bold hover:text-white ease-in duration-300 cursor-pointer"

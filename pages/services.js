@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <motion.section
       id="services"
-      className="min-h-screen mt-20 px-[5vw] flex flex-col items-center justify-center services-bg"
+      className="min-h-screen py-[90px] px-[5vw] services-bg"
     >
       <motion.div>
         <h1 className="text-3xl md:text-4xl text-center font-bold pb-5">

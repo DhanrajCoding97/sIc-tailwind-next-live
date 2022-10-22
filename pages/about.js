@@ -5,8 +5,11 @@ import ImageSlider from "../components/ImageSlider";
 
 const About = () => {
   return (
-    <motion.section id="about" className="min-h-screen px-[5vw] about-bg">
-      <motion.div className=" pt-10">
+    <motion.section
+      id="about"
+      className="min-h-screen py-[90px] px-[5vw] about-bg"
+    >
+      <motion.div className="pt-10">
         <div id="about-description">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
             About Us
@@ -17,7 +20,7 @@ const About = () => {
             Industrial Automation
           </h2>
         </div>
-        <div id="project-list" className="mt-4">
+        <div id="project-list">
           <h3 className="md:text-xl font-bold">
             We take up turnkey projects in Control & Automation Projects for
             Process Industries like -
