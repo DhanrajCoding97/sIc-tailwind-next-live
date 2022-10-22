@@ -113,7 +113,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
           >
             <Link href="/products">
               <a>Products</a>
@@ -129,7 +129,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
           >
             <Link href="/contact">
               <a>Contact Us</a>

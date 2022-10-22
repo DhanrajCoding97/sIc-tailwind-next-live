@@ -36,7 +36,7 @@ const ImageSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <div className="bg-gradient-to-r from-[#1A2980] to-[#26D0CE] h-96 w-full grid justify-center items-center">
+              <div className="relative h-96 w-full grid justify-center items-center">
                 <Image
                   src={slide.image}
                   alt={slide.caption}

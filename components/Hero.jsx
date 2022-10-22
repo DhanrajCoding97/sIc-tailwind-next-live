@@ -11,10 +11,9 @@ const Hero = ({ heading, message }) => {
         duration: 0.75,
       }}
       id="hero"
+      className="relative"
     >
       <div className="flex flex-wrap items-center justify-center min-h-screen md:h-screen lg:h-screen sm:h-screen bg-fixed bg-cover bg-center custom-img">
-        {/* Overlay */}
-        <div className="absolute top-0 left-0 min-h-screen right-0 bottom-0 bg-black/40 z-[1]" />
         <motion.div className="p-5 text text-white z-[2] ml-5 mt-10rem">
           <h1 className="text-2xl  md:text-4xl lg:text-5xl  font-bold text-clip">
             {heading}

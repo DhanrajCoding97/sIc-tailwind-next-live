@@ -5,7 +5,10 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <motion.section id="contact" className="sm:pt-[90px] px-[5vw]">
+    <motion.section
+      id="contact"
+      className="min-h-screen px-[5vw] flex flex-col items-center justify-center"
+    >
       <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
         Contact Us
       </h1>
