@@ -14,7 +14,7 @@ const ServicesCard = () => {
     <motion.div id="cards" className="mb-8 w-[100vw] h-[100vh grid">
       <motion.div
         id="inner-card"
-        className="flex flex-col sm:flex-row justify-around items-center flex-wrap"
+        className="flex flex-col lg:flex-row justify-around items-center flex-wrap"
       >
         {ServiceCardData.map((card) => {
           return (

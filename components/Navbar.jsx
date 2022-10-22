@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState("#000000");
-  const [textColor, setTextColor] = useState("#21E1E1");
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("#ffffff");
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -21,11 +21,11 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor("#ffffff");
-        setTextColor("#000000");
-      } else {
         setColor("#000000");
-        setTextColor("#21E1E1");
+        setTextColor("#ffffff");
+      } else {
+        setColor("transparent");
+        setTextColor("#ffffff");
       }
     };
     window.addEventListener("scroll", changeColor);
@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="m-auto flex justify-between items-center p-4">
         <div className="flex" onClick={toggleHome}>
-          <div id="logo-container" className="flex md:hidden cursor-pointer">
+          <div id="logo-container" className="flex :hidden cursor-pointer">
             <Link href="/">
               <a>
                 <Image
@@ -48,13 +48,6 @@ const Navbar = () => {
                   height="50"
                   onClick={toggleHome}
                 />
-              </a>
-            </Link>
-          </div>
-          <div style={{ color: `${textColor}` }}>
-            <Link href="/">
-              <a className="hidden md:block font-bold hover:text-rose-600 text-3xl cursor-pointer ease-in duration-300">
-                Star Instruments & Control
               </a>
             </Link>
           </div>
@@ -73,7 +66,7 @@ const Navbar = () => {
             className="p-4 "
           >
             <Link href="/">
-              <a className="font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer hover:text-">
+              <a className="font-bold hover:text-rose-600 cursor-pointer">
                 Home
               </a>
             </Link>
@@ -88,7 +81,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
           >
             <Link href="/about">
               <a>About Us</a>
@@ -104,7 +97,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 ease-in duration-300 cursor-pointer"
+            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
           >
             <Link href="/services">
               <a>Services</a>

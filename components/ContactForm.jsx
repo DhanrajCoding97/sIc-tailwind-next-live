@@ -5,41 +5,8 @@ import { motion } from "framer-motion";
 import { FaCheckSquare, FaExclamation } from "react-icons/fa";
 
 const ContactForm = () => {
-  // const contactForm = document.getElementById("form");
-  // const name = document.getElementById("name");
-  // const email = document.getElementById("email");
-  // const subject = document.getElementById("subject");
-  // const message = document.getElementById("message");
-
-  // contactForm.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   checkInputs();
-  // });
-
-  // const checkInputs = () => {
-  //   const nameValue = name.value.trim();
-  //   const emailValue = email.value.trim();
-  //   const subjectValue = subject.value.trim();
-  //   const messageValue = message.value.trim();
-
-  //   if (nameValue === "") {
-  //     setErrorFor(name, "Name cannot be blank");
-  //   } else {
-  //     setSuccessFor(name);
-  //   }
-  // };
-
-  // const setErrorFor = (input, message) => {
-  //   const formControl = input.parentElememnt();
-  //   const small = formControl.querySelector("small");
-
-  //   small.innerText = message;
-  //   formControl.className = "form-control error";
-  // };
-
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_4fcvq68",
@@ -70,12 +37,7 @@ const ContactForm = () => {
         >
           <h2 className="text-xl sm:text-2xl p-2 font-bold">Contact Form</h2>
         </div>
-        <form
-          id="contact-form"
-          ref={form}
-          onSubmit={sendEmail}
-          className="py-2 px-5"
-        >
+        <form id="contact-form" onSubmit={sendEmail} className="py-2 px-5">
           <div id="form-control" className="mb-3 pb-5 relative">
             <input
               type="text"
