@@ -1,15 +1,16 @@
 import { React, useRef } from "react";
-import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { FaCheckSquare, FaExclamation } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
+
     emailjs
       .sendForm(
-        "service_4fcvq68",
+        "service_s5cyj7q",
         "template_750jgac",
         form.current,
         "7ekb104slKI6Df4WM"
@@ -22,9 +23,7 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
-    e.target.reset();
   };
-
   return (
     <div className="flex items-center justify-center text-black">
       <div
@@ -37,87 +36,46 @@ const ContactForm = () => {
         >
           <h2 className="text-xl sm:text-2xl p-2 font-bold">Contact Form</h2>
         </div>
-        <form id="contact-form" onSubmit={sendEmail} className="py-2 px-5">
+        <form
+          ref={form}
+          id="contact-form"
+          className="py-2 px-5"
+          onSubmit={sendEmail}
+        >
           <div id="form-control" className="mb-3 pb-5 relative">
             <input
+              id="name"
               type="text"
               placeholder="Name"
-              id="name"
+              name="user_name"
               className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl"
             />
-            <i id="check-icon" className="absolute top-10 right-[10px] hidden">
-              <FaCheckSquare />
-            </i>
-            <i
-              id="excalamation-icon"
-              className="absolute top-10 right-[10px] hidden"
-            >
-              <FaCheckSquare />" <FaExclamation />
-            </i>
-            <small className="hidden absolute bottom-0 left-0">
-              Error message
-            </small>
           </div>
           <div id="form-control" className="mb-3 pb-5 relative">
             <input
-              type="text"
-              placeholder="emailid@gmail.com"
               id="email"
+              type="email"
+              placeholder="emailid@gmail.com"
+              name="user_email"
               className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl"
             />
-            <i id="check-icon" className="absolute top-10 right-[10px] hidden">
-              <FaCheckSquare />
-            </i>
-            <i
-              id="excalamation-icon"
-              className="absolute top-10 right-[10px] hidden"
-            >
-              <FaExclamation />
-            </i>
-            <small className="hidden absolute bottom-0 left-0">
-              Error message
-            </small>
           </div>
           <div id="form-control" className="mb-3 pb-5 relative">
             <input
+              id="subject"
               type="text"
               placeholder="subject"
-              id="subject"
+              name="subject"
               className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl"
             />
-            <i id="check-icon" className="absolute top-10 right-[10px] hidden">
-              <FaCheckSquare className="check-icon" />
-            </i>
-            <i
-              id="excalamation-icon"
-              className="absolute top-10 right-[10px] hidden"
-            >
-              <FaExclamation />
-            </i>
-            <small className="hidden absolute bottom-0 left-0">
-              Error message
-            </small>
           </div>
           <div id="form-control" className="mb-3 pb-5 relative">
             <textarea
-              placeholder="Message"
               id="message"
-              cols="39"
-              rows="1"
-              className="resize-none border-2 border-stone-900 p-3 placeholder:text-black placeholder:font-bold rounded-xl"
-            ></textarea>
-            <i id="check-icon" className="absolute top-10 right-[10px] hidden">
-              <FaCheckSquare className="check-icon" />
-            </i>
-            <i
-              id="excalamation-icon"
-              className="absolute top-10 right-[10px] hidden"
-            >
-              <FaExclamation className="excalamation-icon" />
-            </i>
-            <small className="hidden absolute bottom-0 left-0">
-              Error message
-            </small>
+              placeholder="Message"
+              name="message"
+              className="resize-none border-2 border-stone-900 p-3 placeholder:text-black placeholder:font-bold rounded-xl w-full"
+            />
           </div>
           <div className="flex items-center justify-center">
             <motion.button
