@@ -43,6 +43,7 @@ body::-webkit-scrollbar-thumb {
 
 .content{
   color: #34d399;
+  background-color: black;
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0,1,0,1);
@@ -70,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about-bg {
-  background-image: url("./assets/wave-haikei.svg");
+  background-image: url("./assets/inverted-waves-about.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -81,8 +82,14 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
-.products-bg {
-  background-image: url("./assets/blob.svg");
+.products-bg{
+  background-image: url("./assets/wavesproduct.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-bg {
+  background-image: url("./assets/polygridContact.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

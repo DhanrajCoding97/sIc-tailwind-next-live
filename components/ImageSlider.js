@@ -36,16 +36,16 @@ const ImageSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <div className="relative h-96 w-full grid justify-center items-center">
+              <div className="relative h-96 w-full grid justify-center items-center bg-gradient-to-tr from-sky-900 to-sky-300">
                 <Image
                   src={slide.image}
                   alt={slide.caption}
-                  className=" w-full h-96 absolute top-[50%] object-cover mix-blend-overlay"
+                  className="w-full h-96 absolute top-[50%] object-cover mix-blend-overlay"
                   layout="fill"
                 />
                 <span
                   id="caption"
-                  className="text-xl sm:text-3xl font-bold text-yellow-200"
+                  className="text-xl sm:text-3xl font-bold text-"
                 >
                   {slide.caption}
                 </span>

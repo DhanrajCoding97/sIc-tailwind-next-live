@@ -5,10 +5,21 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <motion.section id="contact" className="min-h-screen py-[90px] px-[5vw]">
-      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
-        Contact Us
-      </h1>
+    <motion.section
+      id="contact"
+      className="min-h-screen py-[90px] px-[5vw] contact-bg"
+    >
+      <div
+        id="contact-header"
+        className="mb-10 flex flex-col items-center justify-center"
+      >
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold">
+          Contact Us
+        </h1>
+        <p className="text-xl p-5">
+          For all enquires, please email using the form below
+        </p>
+      </div>
       <ContactForm />
       <motion.div>
         <div className="flex items-center justify-center mt-5">
@@ -20,7 +31,7 @@ const Contact = () => {
           >
             Connect us on Whatsapp{" "}
             <span className="pl-3">
-              <BsWhatsapp color="green" size={25} />
+              <BsWhatsapp size={25} />
             </span>
           </motion.a>
         </div>

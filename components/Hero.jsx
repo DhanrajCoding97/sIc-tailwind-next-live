@@ -28,7 +28,7 @@ const Hero = ({ heading, message }) => {
             duration={500}
           >
             <motion.button
-              className="px-5 py-2 rounded  bg-white text-black font-bold hover:bg-emerald-400  hover:text-black cursor-pointer"
+              className="px-5 py-2 rounded  bg-white text-black font-bold cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
