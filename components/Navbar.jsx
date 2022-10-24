@@ -66,7 +66,7 @@ const Navbar = () => {
             className="p-4 "
           >
             <Link href="/">
-              <a className="font-bold hover:text-rose-600 cursor-pointer">
+              <a className="font-bold hover:text-lime-400 cursor-pointer">
                 Home
               </a>
             </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
+            className="p-4 font-bold hover:text-lime-400 duration-200 cursor-pointer"
           >
             <Link href="/about">
               <a>About Us</a>
@@ -97,7 +97,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
+            className="p-4 font-bold hover:text-lime-400 cursor-pointer"
           >
             <Link href="/services">
               <a>Services</a>
@@ -113,7 +113,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
+            className="p-4 font-bold hover:text-lime-400 cursor-pointer"
           >
             <Link href="/products">
               <a>Products</a>
@@ -129,7 +129,7 @@ const Navbar = () => {
             whileTap={{
               scale: 0.9,
             }}
-            className="p-4 font-bold hover:text-rose-600 cursor-pointer"
+            className="p-4 font-bold hover:text-lime-400 cursor-pointer"
           >
             <Link href="/contact">
               <a>Contact Us</a>

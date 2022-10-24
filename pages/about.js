@@ -6,6 +6,8 @@ import ImageSlider from "../components/ImageSlider";
 const About = () => {
   return (
     <motion.section
+      initial={{ scale: 0 }}
+      animate={{ x: 100, scale: 1 }}
       id="about"
       className="min-h-screen py-[90px] px-[5vw] about-bg"
     >

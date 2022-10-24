@@ -28,7 +28,7 @@ const ContactForm = () => {
     <div className="flex items-center justify-center text-black">
       <div
         id="container"
-        className="w-[400px] max-w-full bg-white rounded-[5px] shadow-[0 2px 5px rgba(0,0,0,0.3) overflow-hidden]"
+        className="w-[400px] max-w-full bg-black rounded-[5px] shadow-[0 2px 5px rgba(0,0,0,0.3) overflow-hidden]"
       >
         <div
           id="header"
@@ -48,7 +48,7 @@ const ContactForm = () => {
               type="text"
               placeholder="Name"
               name="user_name"
-              className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl"
+              className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl bg-rose-600"
             />
           </div>
           <div id="form-control" className="mb-3 pb-5 relative">
@@ -57,7 +57,7 @@ const ContactForm = () => {
               type="email"
               placeholder="emailid@gmail.com"
               name="user_email"
-              className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl"
+              className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl bg-rose-600"
             />
           </div>
           <div id="form-control" className="mb-3 pb-5 relative">
@@ -66,20 +66,20 @@ const ContactForm = () => {
               type="text"
               placeholder="subject"
               name="subject"
-              className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl"
+              className="block w-full p-3 border-2 border-stone-900 text-sm placeholder:text-black placeholder:font-bold rounded-xl bg-rose-600"
             />
           </div>
-          <div id="form-control" className="mb-3 pb-5 relative">
+          <div id="form-control" className="mb-4 relative">
             <textarea
               id="message"
               placeholder="Message"
               name="message"
-              className="resize-none border-2 border-stone-900 p-3 placeholder:text-black placeholder:font-bold rounded-xl w-full"
+              className="resize-none border-2 border-stone-900 p-3 placeholder:text-black placeholder:font-bold rounded-xl w-full bg-rose-600"
             />
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center pb-4 ">
             <motion.button
-              className="px-5 py-2 rounded  bg-black text-white font-bold hover:bg-emerald-400  hover:text-black cursor-pointer"
+              className="px-5 py-2 bg-rose-600 font-bold text- hover:text-black cursor-pointer rounded-full"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
