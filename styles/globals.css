@@ -34,6 +34,16 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #34d399;  /* creates padding around scroll thumb */
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .custom-img {
   background:
     linear-gradient(135deg, hsla(224, 100%, 50%, 0.65), hsla(277, 100%, 50%, 0.65)),

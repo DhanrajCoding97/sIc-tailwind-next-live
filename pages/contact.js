@@ -6,31 +6,35 @@ import SocialLink from "../components/SocialLink";
 
 const Contact = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.2,
   });
+
+  const contactVariants = {
+    hidden: { x: "100vw" },
+    visible: { x: 0 },
+    transition: {
+      bounce: 0.3,
+      duration: 3,
+    },
+  };
 
   const animation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start({
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 2,
-          bounce: 0.3,
-        },
-      });
+      animation.start("visible");
     }
     if (!inView) {
-      animation.start({ opacity: 0 });
+      animation.start("hidden");
     }
-  }, [inView]);
+  }, [animation, inView]);
+
   return (
-    <motion.div ref={ref}>
-      <motion.section
-        id="contact"
+    <motion.section id="contact" ref={ref}>
+      <motion.div
+        initial="hidden"
         animate={animation}
+        variants={contactVariants}
         className="py-[90px] px-[5vw] contact-bg min-h-screen"
       >
         <div
@@ -44,12 +48,19 @@ const Contact = () => {
             For all enquires, please email using the form below
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 2,
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center"
+        >
           <ContactForm />
           <SocialLink />
-        </div>
-      </motion.section>
-    </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -7,35 +7,44 @@ import CustomerList from "../components/CustomerList";
 
 const About = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.2,
   });
+
+  const aboutVariants = {
+    hidden: { x: "-100vw" },
+    visible: { x: 0 },
+    transition: {
+      bounce: 0.3,
+      duration: 5,
+    },
+  };
 
   const animation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start({
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 2,
-          bounce: 0.3,
-        },
-      });
+      animation.start("visible");
     }
     if (!inView) {
-      animation.start({ opacity: 0 });
+      animation.start("hidden");
     }
-  }, [inView]);
+  }, [animation, inView]);
 
   return (
-    <motion.div ref={ref}>
-      <motion.section
+    <motion.section id="about" ref={ref}>
+      <motion.div
+        initial="hidden"
         animate={animation}
-        id="about"
+        variants={aboutVariants}
         className="py-[90px] px-[5vw] about-bg"
       >
-        <motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 2,
+          }}
+        >
           <div id="about-description">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
               About Us
@@ -55,8 +64,8 @@ const About = () => {
           </div>
           <CustomerList />
         </motion.div>
-      </motion.section>
-    </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

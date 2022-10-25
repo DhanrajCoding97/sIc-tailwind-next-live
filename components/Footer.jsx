@@ -8,7 +8,7 @@ import { HiMail } from "react-icons/hi";
 
 const Footer = () => {
   return (
-    <footer className="footer-bg mt-4">
+    <footer className="p-5 footer-bg">
       <div className="text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-4">

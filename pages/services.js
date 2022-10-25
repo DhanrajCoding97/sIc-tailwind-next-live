@@ -5,39 +5,51 @@ import ServicesCard from "../components/ServicesCard";
 
 const Services = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.2,
   });
+
+  const serviceVariants = {
+    hidden: { x: "100vw" },
+    visible: { x: 0 },
+    transition: {
+      bounce: 0.3,
+      duration: 3,
+    },
+  };
 
   const animation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start({
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 2,
-          bounce: 0.3,
-        },
-      });
+      animation.start("visible");
     }
     if (!inView) {
-      animation.start({ opacity: 0 });
+      animation.start("hidden");
     }
-  }, [inView]);
+  }, [animation, inView]);
+
   return (
-    <motion.div ref={ref}>
-      <motion.section
-        id="services"
+    <motion.section id="services" ref={ref}>
+      <motion.div
+        initial="hidden"
         animate={animation}
+        variants={serviceVariants}
         className="py-[90px] px-[5vw] services-bg min-h-screen"
       >
-        <h1 className="text-3xl md:text-4xl text-center font-bold pb-5">
-          Our Services
-        </h1>
-        <ServicesCard />
-      </motion.section>
-    </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 2,
+          }}
+        >
+          <h1 className="text-3xl md:text-4xl text-center font-bold pb-5">
+            Our Services
+          </h1>
+          <ServicesCard />
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
