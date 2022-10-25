@@ -27,12 +27,12 @@ const Contact = () => {
     }
   }, [inView]);
   return (
-    <div ref={ref}>
-      <motion.section
-        id="contact"
-        animate={animation}
-        className="min-h-screen py-[90px] px-[5vw] contact-bg"
-      >
+    <motion.section
+      id="contact"
+      ref={ref}
+      className="py-[90px] px-[5vw] contact-bg min-h-screen"
+    >
+      <motion.div animate={animation}>
         <div
           id="contact-header"
           className="flex flex-col items-center justify-center"
@@ -48,8 +48,8 @@ const Contact = () => {
           <ContactForm />
           <SocialLink />
         </div>
-      </motion.section>
-    </div>
+      </motion.div>
+    </motion.section>
   );
 };
 

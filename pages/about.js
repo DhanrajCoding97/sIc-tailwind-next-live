@@ -29,13 +29,13 @@ const About = () => {
   }, [inView]);
 
   return (
-    <div ref={ref}>
-      <motion.section
-        animate={animation}
-        id="about"
-        className="min-h-screen py-[90px] px-[5vw] about-bg"
-      >
-        <motion.div className="pt-10">
+    <motion.section
+      ref={ref}
+      id="about"
+      className="py-[90px] px-[5vw] about-bg"
+    >
+      <motion.div animate={animation}>
+        <motion.div>
           <div id="about-description">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
               About Us
@@ -55,8 +55,8 @@ const About = () => {
           </div>
           <CustomerList />
         </motion.div>
-      </motion.section>
-    </div>
+      </motion.div>
+    </motion.section>
   );
 };
 

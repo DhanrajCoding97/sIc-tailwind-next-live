@@ -26,20 +26,18 @@ const Services = () => {
     }
   }, [inView]);
   return (
-    <div ref={ref}>
-      <motion.section
-        id="services"
-        animate={animation}
-        className="min-h-screen py-[90px] px-[5vw] services-bg"
-      >
-        <motion.div>
-          <h1 className="text-3xl md:text-4xl text-center font-bold pb-5">
-            Our Services
-          </h1>
-          <ServicesCard />
-        </motion.div>
-      </motion.section>
-    </div>
+    <motion.section
+      ref={ref}
+      id="services"
+      className="py-[90px] px-[5vw] services-bg min-h-screen"
+    >
+      <motion.div animate={animation}>
+        <h1 className="text-3xl md:text-4xl text-center font-bold pb-5">
+          Our Services
+        </h1>
+        <ServicesCard />
+      </motion.div>
+    </motion.section>
   );
 };
 

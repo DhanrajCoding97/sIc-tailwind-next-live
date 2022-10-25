@@ -6,8 +6,8 @@ import { HiMail } from "react-icons/hi";
 
 const SocialLink = () => {
   return (
-    <motion.div className="w-[400px]">
-      <div className="bg-black rounded-xl min-h-full p-5">
+    <motion.div className="max-w-[400px]">
+      <div className="bg-black rounded-xl p-5">
         <div className="flex flex-col items-center">
           <div id="google-map">
             <iframe

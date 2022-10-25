@@ -7,7 +7,7 @@ import Contact from "./contact";
 
 export default function Home() {
   return (
-    <div id="main">
+    <div id="app">
       <Hero
         heading="If you want to buy Electrical or Instrumentation Products."
         message="You came to the Right place."

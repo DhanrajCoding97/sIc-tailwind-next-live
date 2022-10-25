@@ -26,10 +26,7 @@ const ContactForm = () => {
   };
   return (
     <div className="flex items-center justify-center text-black">
-      <div
-        id="container"
-        className="bg-black rounded-xl shadow-[0 2px 5px rgba(0,0,0,0.3) overflow-hidden] w-[400px]"
-      >
+      <div id="container" className="bg-black rounded-xl w-[400px]">
         <form
           ref={form}
           id="contact-form"
