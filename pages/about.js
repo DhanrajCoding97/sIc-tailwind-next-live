@@ -7,7 +7,7 @@ import CustomerList from "../components/CustomerList";
 
 const About = () => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   const animation = useAnimation();

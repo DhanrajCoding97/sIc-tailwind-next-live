@@ -26,11 +26,11 @@ const ContactForm = () => {
   };
   return (
     <div className="flex items-center justify-center text-black">
-      <div id="container" className="bg-black rounded-xl w-[400px]">
+      <div id="container" className="bg-black rounded-xl w-[300px]">
         <form
           ref={form}
           id="contact-form"
-          className="p-5 max-w-[400px]"
+          className="p-5 max-w-[300px]"
           onSubmit={sendEmail}
         >
           <div id="form-control" className="mb-3 pb-5 relative">

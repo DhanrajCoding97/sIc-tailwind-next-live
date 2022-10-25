@@ -5,7 +5,7 @@ import ServicesCard from "../components/ServicesCard";
 
 const Services = () => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   const animation = useAnimation();

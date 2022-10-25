@@ -6,13 +6,13 @@ import { HiMail } from "react-icons/hi";
 
 const SocialLink = () => {
   return (
-    <motion.div className="max-w-[400px]">
+    <motion.div className="max-w-[300px]">
       <div className="bg-black rounded-xl p-5">
         <div className="flex flex-col items-center">
           <div id="google-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.493738473291!2d77.5562915146124!3d13.004199690834463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d86daec7ed1%3A0x91e936c4a674e8d!2sStar%20Instruments%20%26%20Controls!5e0!3m2!1sen!2sin!4v1666613938568!5m2!1sen!2sin"
-              className="w-auto h-[350px] rounded-xl"
+              className="w-[260px] h-[350px] rounded-xl"
               loading="lazy"
             ></iframe>
           </div>
