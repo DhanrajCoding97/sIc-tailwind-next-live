@@ -7,7 +7,7 @@ import CustomerList from "../components/CustomerList";
 
 const About = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
   const animation = useAnimation();
@@ -15,26 +15,26 @@ const About = () => {
   useEffect(() => {
     if (inView) {
       animation.start({
-        x: 0,
+        opacity: 1,
         transition: {
           type: "spring",
-          duration: 3,
+          duration: 2,
           bounce: 0.3,
         },
       });
     }
     if (!inView) {
-      animation.start({ x: "-100vw" });
+      animation.start({ opacity: 0 });
     }
   }, [inView]);
 
   return (
-    <motion.section
-      ref={ref}
-      id="about"
-      className="py-[90px] px-[5vw] about-bg"
-    >
-      <motion.div animate={animation}>
+    <motion.div ref={ref}>
+      <motion.section
+        animate={animation}
+        id="about"
+        className="py-[90px] px-[5vw] about-bg"
+      >
         <motion.div>
           <div id="about-description">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
@@ -55,8 +55,8 @@ const About = () => {
           </div>
           <CustomerList />
         </motion.div>
-      </motion.div>
-    </motion.section>
+      </motion.section>
+    </motion.div>
   );
 };
 

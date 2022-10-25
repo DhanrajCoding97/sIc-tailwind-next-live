@@ -6,7 +6,7 @@ import SocialLink from "../components/SocialLink";
 
 const Contact = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
   const animation = useAnimation();
@@ -14,25 +14,25 @@ const Contact = () => {
   useEffect(() => {
     if (inView) {
       animation.start({
-        x: 0,
+        opacity: 1,
         transition: {
           type: "spring",
-          duration: 3,
+          duration: 2,
           bounce: 0.3,
         },
       });
     }
     if (!inView) {
-      animation.start({ x: "100vw" });
+      animation.start({ opacity: 0 });
     }
   }, [inView]);
   return (
-    <motion.section
-      id="contact"
-      ref={ref}
-      className="py-[90px] px-[5vw] contact-bg min-h-screen"
-    >
-      <motion.div animate={animation}>
+    <motion.div ref={ref}>
+      <motion.section
+        id="contact"
+        animate={animation}
+        className="py-[90px] px-[5vw] contact-bg min-h-screen"
+      >
         <div
           id="contact-header"
           className="flex flex-col items-center justify-center"
@@ -48,8 +48,8 @@ const Contact = () => {
           <ContactForm />
           <SocialLink />
         </div>
-      </motion.div>
-    </motion.section>
+      </motion.section>
+    </motion.div>
   );
 };
 

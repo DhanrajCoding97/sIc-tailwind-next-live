@@ -5,7 +5,7 @@ import ProductCatalog from "../components/ProductCatalog";
 
 const Products = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
   const animation = useAnimation();
@@ -13,24 +13,24 @@ const Products = () => {
   useEffect(() => {
     if (inView) {
       animation.start({
-        x: 0,
+        opacity: 1,
         transition: {
           type: "spring",
-          duration: 3,
+          duration: 2,
           bounce: 0.3,
         },
       });
     }
     if (!inView) {
-      animation.start({ x: "-100vw" });
+      animation.start({ opacity: 0 });
     }
   }, [inView]);
   return (
-    <motion.section
-      ref={ref}
-      className="py-[90px] px-[5vw] products-bg min-h-screen"
-    >
-      <motion.div animate={animation}>
+    <motion.div ref={ref}>
+      <motion.section
+        animate={animation}
+        className="py-[90px] px-[5vw] products-bg min-h-screen"
+      >
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">
           Our Products
         </h1>
@@ -41,8 +41,8 @@ const Products = () => {
           etc.
         </p>
         <ProductCatalog />
-      </motion.div>
-    </motion.section>
+      </motion.section>
+    </motion.div>
   );
 };
 
