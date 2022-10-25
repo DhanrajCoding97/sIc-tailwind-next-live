@@ -11,11 +11,11 @@ const About = () => {
   });
 
   const aboutVariants = {
-    hidden: { x: "-100vw" },
-    visible: { x: 0 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
     transition: {
       bounce: 0.3,
-      duration: 5,
+      duration: 2,
     },
   };
 
@@ -31,7 +31,7 @@ const About = () => {
   }, [animation, inView]);
 
   return (
-    <motion.section id="about" ref={ref}>
+    <motion.section ref={ref} id="about">
       <motion.div
         initial="hidden"
         animate={animation}
@@ -39,8 +39,8 @@ const About = () => {
         className="py-[90px] px-[5vw] about-bg"
       >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
           transition={{
             duration: 2,
           }}

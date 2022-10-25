@@ -9,11 +9,11 @@ const Services = () => {
   });
 
   const serviceVariants = {
-    hidden: { x: "100vw" },
-    visible: { x: 0 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
     transition: {
       bounce: 0.3,
-      duration: 3,
+      duration: 2,
     },
   };
 
@@ -37,8 +37,8 @@ const Services = () => {
         className="py-[90px] px-[5vw] services-bg min-h-screen"
       >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
           transition={{
             duration: 2,
           }}
