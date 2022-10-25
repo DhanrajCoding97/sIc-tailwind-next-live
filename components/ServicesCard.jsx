@@ -46,18 +46,16 @@ const ServicesCard = () => {
               {openedCard === card.id && openModal ? (
                 <motion.div
                   id="modal-bg"
-                  className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center z-50"
+                  className="fixed w-full h-full top-0 left-0 bg-black flex items-center justify-center z-50 rounded-3xl"
                 >
                   <motion.div
                     id="modal-container"
-                    initial={{ y: "-100vh" }}
-                    animate={{ y: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{
                       duration: 1,
-                      type: "spring",
-                      bounce: 0.3,
                     }}
-                    className="w-[500px] h-[500px] bg-lime-400 flex flex-col p-6 overflow-y-auto rounded-3xl"
+                    className="max-w-[300px] max-h-[500px] bg-lime-400 flex flex-col p-6 overflow-y-auto rounded-3xl"
                   >
                     <motion.button
                       onClick={() => {
