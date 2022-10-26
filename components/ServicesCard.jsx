@@ -20,7 +20,7 @@ const ServicesCard = () => {
           return (
             <div
               key={card.id}
-              className="min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem] mb-8 sm:mb-none "
+              className="relative min-w-[15rem] sm:min-w-[20rem] sm:max-h-[40rem] mb-8 sm:mb-none "
             >
               <img
                 src={card.imagePath}
@@ -46,7 +46,7 @@ const ServicesCard = () => {
               {openedCard === card.id && openModal ? (
                 <motion.div
                   id="modal-bg"
-                  className="fixed w-full h-full top-0 left-0 bg-black flex items-center justify-center z-50 rounded-3xl"
+                  className="absolute sm:fixed w-full top-0 left-0 sm:w-full h-full bg-black flex items-center justify-center z-50 rounded-3xl"
                 >
                   <motion.div
                     id="modal-container"
@@ -55,7 +55,7 @@ const ServicesCard = () => {
                     transition={{
                       duration: 1,
                     }}
-                    className="max-w-[300px] max-h-[500px] bg-lime-400 flex flex-col p-6 overflow-y-auto rounded-3xl"
+                    className="max-w-[250px] max-h-[300px] sm:max-w-2xl sm:max-h-96 bg-lime-400 flex flex-col p-6 overflow-y-auto rounded-3xl"
                   >
                     <motion.button
                       onClick={() => {

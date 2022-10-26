@@ -43,7 +43,6 @@ const Contact = () => {
           transition={{
             duration: 2,
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center"
         >
           <div
             id="contact-header"
@@ -56,8 +55,10 @@ const Contact = () => {
               For all enquires, please email using the form below
             </p>
           </div>
-          <ContactForm />
-          <SocialLink />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+            <ContactForm />
+            <SocialLink />
+          </div>
         </motion.div>
       </motion.div>
     </motion.section>
