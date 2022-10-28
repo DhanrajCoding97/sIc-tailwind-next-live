@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import ServiceCardData from "./ServiceCardData";
 import { motion } from "framer-motion";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -9,6 +9,15 @@ const ServicesCard = () => {
 
   //card open code
   const [openedCard, setOpenedCard] = useState(null);
+
+  //cost overflow hidden
+  useEffect(() => {
+    if (openModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  });
 
   return (
     <div id="cards" className="mb-8 grid">
