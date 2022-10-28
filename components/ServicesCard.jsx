@@ -87,7 +87,7 @@ const ServicesCard = () => {
                         <p className="text-md sm:text-2xl font-bold">
                           {card.alt} list
                         </p>
-                        <ul className="marker:text-green list-outside list-disc ml-6 p-2 font-bold text-md leading-relaxed scrollbar-hide::-webkit-scrollbar scrollbar-hide">
+                        <ul className="no-scrollbar::-webkit-scrollbar no-scrollbar marker:text-green list-outside list-disc ml-6 p-2 font-bold text-md leading-relaxed scrollbar-hide::-webkit-scrollbar scrollbar-hide">
                           {card.description.map((item, index) => {
                             return (
                               <motion.li

@@ -40,7 +40,7 @@ const Products = () => {
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{
-            duration: 2,
+            duration: 1,
           }}
         >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold pb-5">

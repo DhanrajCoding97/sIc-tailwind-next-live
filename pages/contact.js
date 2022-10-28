@@ -41,7 +41,8 @@ const Contact = () => {
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{
-            duration: 2,
+            type: "spring",
+            duration: 1,
           }}
         >
           <div
